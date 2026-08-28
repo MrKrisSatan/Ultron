@@ -1,9 +1,13 @@
-# Ultron v2.1.0
+# Ultron v2.1.1
 
-Ultron v2.1.0 integrates the one-to-four robot selection directly into Oak's introduction. In both Gen 1 and Gen 2, Oak asks how many robot rivals should inhabit the save immediately after the player finishes naming themselves.
+Ultron keeps the appropriate unused/counter laboratory starter. Data, R2-D2 and WALL-E now form their own competitive Fire/Water/Grass cycle at level 5: Vulpix/Horsea/Bellsprout in Red, Blue and Yellow, and Houndour/Horsea/Bellsprout in Gold, Silver and Crystal. Conversion mods receive registry-aware type fallbacks when a preferred species is absent.
 
-Ultron, Data, R2-D2 and WALL-E now maintain persistent individual voice profiles. Their speech develops through repeated player battles: victories build confidence, defeats increase analysis and adaptation, and long histories produce more established rivalry dialogue.
+Robots can trade eligible Pokémon with one another and the player can trade directly through the selected robot's interaction menu while physically present on the same map. Trade evolutions now occur from actual trades, with Gen 2 held-item evolutions checking and consuming the correct held item.
 
-Before any robot challenges the player, its current thought appears in the game's standard text box. The battle begins only after the player closes that message.
+Ultron v2.1.1 teaches every robot the native Generation 2 breeding system and gives each one an isolated Route 34 Day-Care record.
 
-This release also embeds companion-only double battles, independent companion battle control, companion captures after one wild opponent faints, and the hard two-target Poké Ball refusal for both the player and robot trainers.
+In Gold, Silver and Crystal, a robot can now select compatible Pokémon it genuinely owns, travel to the Day-Care, deposit the parents, continue its journey while the Egg develops, return to collect it, pay the fee from its own money, and train the level-5 hatchling normally. Parents and offspring remain in that robot's party, PC and save state.
+
+The planner implements Gen 2 Egg Groups, gender and Ditto roles, matching-DV incompatibility, base-form and Nidoran offspring, species hatch cycles, father-side Egg Move and TM/HM inheritance, shared parental level-up moves, and Defense/low-Special DV inheritance. Crystal's canonical Egg Move lists are bundled and ranked against the final evolution's offline competitive recommendations.
+
+Robot breeding never reads or writes the player's party, Day-Care parents, Egg, step counter, flags or breeding progress.

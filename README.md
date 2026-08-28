@@ -1,4 +1,4 @@
-# Ultron v2.1.0
+# Ultron v2.1.1
 
 Ultron is a standalone living-rival mod for Gen1Recomp and Gen2Recomp. A new save can contain **one to four autonomous robot trainers**, each pursuing the Pokémon League alongside the player rather than waiting on a route as a conventional NPC.
 
@@ -26,6 +26,22 @@ After the player finishes entering their name, Oak asks how many robot rivals sh
 Every robot has its own party, PC boxes, money, inventory, Poké Balls, TMs, HMs, badges, objectives, map position, memories, relationships and battle record. They do not share artificial progress.
 
 The robots can meet, battle one another, exchange observed information, trade eligible duplicate Pokémon and develop friendships, mentorships, competitive respect, rivalries, feuds and arch-rivalries. A robot falling behind its peers receives motivation to catch and train legitimately rather than free levels or Pokémon.
+
+## Four-agent starter balance
+
+Ultron receives the appropriate unused/counter laboratory starter after the player's choice. The other three robots use a separate level-5 Fire/Water/Grass cycle so four-agent saves remain balanced without repeating the normal starter trio:
+
+| Game | Data | R2-D2 | WALL-E |
+|---|---|---|---|
+| Red / Blue | Vulpix | Horsea | Bellsprout |
+| Yellow | Vulpix | Horsea | Bellsprout |
+| Gold / Silver / Crystal | Houndour | Horsea | Bellsprout |
+
+Each alternate starter begins with a legal same-type damaging move at level 5. If a conversion omits one of these species, Ultron selects the nearest balanced Fire, Water or Grass fallback present in that game's live registry.
+
+## Pokémon trading
+
+Robots can trade eligible Pokémon with one another when physically together, and the player can select **Trade Pokémon** while speaking to a robot on the same map. Starters, Eggs, signature partners, aces, strongly bonded Pokémon and a robot's last usable party member are protected from being offered. Pokémon retain their level and moves, change ownership legitimately and trigger real trade evolutions; Gen 2 held-item trade evolutions require and consume the correct held item. Trading does not alter story flags or manufacture Pokémon.
 
 ## Thoughts before player battles
 
@@ -58,6 +74,12 @@ Robots observe revealed Pokémon, levels, moves and contiguous player travel. Th
 Direct observations remain more trusted than imported or second-hand information. If a robot knows the player's team substantially outlevels its own, it prioritises catching, training and team preparation before seeking another rematch.
 
 Portable training-data import and export shares confirmed strategic knowledge without copying Pokémon, levels, badges, money, inventory, story progress or personal chat history. Imported knowledge is stored with the save data rather than inside the mod directory.
+
+## Private Gen 2 competitive breeding
+
+In Gold, Silver and Crystal, every robot has a private Route 34 Day-Care record that is completely separate from the player's deposited Pokémon, Egg, step counters and breeding flags. A robot physically travels to the Day-Care with compatible parents, continues its journey while the Egg develops, returns to collect it, pays the fee from its own money and then trains the hatchling normally.
+
+The breeding planner understands Gen 2 Egg Groups, gender and Ditto compatibility, the matching-DV refusal, base-form offspring, level-5 Eggs, species hatch cycles, Nidoran offspring, father-side Egg Move and TM/HM inheritance, shared parental level-up moves, and Gen 2 Defense/Special DV inheritance. It combines the live Pokémon registry with the bundled Crystal Egg Move table and Gen 2 competitive set knowledge to prefer legal inherited moves that improve the final evolution's intended role. Parents and offspring always remain the property of that robot.
 
 ## Companions and embedded double battles
 
@@ -95,7 +117,7 @@ Persistent settings include Catch Legendaries, Forgettable HMs, Reusable TMs, Pe
 
 ## Installation
 
-1. Download [`Ultron_v2.1.0.zip`](https://github.com/MrKrisSatan/Ultron/releases/download/v2.1.0/Ultron_v2.1.0.zip).
+1. Download [`Ultron_v2.1.1.zip`](https://github.com/MrKrisSatan/Ultron/releases/download/v2.1.1/Ultron_v2.1.1.zip).
 2. Install or extract it as the `ultron` mod directory.
 3. Confirm that `manifest.json` and `main.lua` are directly inside that directory.
 4. Start a new Red, Blue, Yellow, Gold, Silver or Crystal save to choose one to four robots during Oak's introduction.
@@ -112,6 +134,6 @@ Ultron remains dormant until the player's starter is committed. Existing saves m
 
 ## Release and validation
 
-Current release: **[v2.1.0](https://github.com/MrKrisSatan/Ultron/releases/tag/v2.1.0)**.
+Current release: **[v2.1.1](https://github.com/MrKrisSatan/Ultron/releases/tag/v2.1.1)**.
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and [RELEASE_NOTES.md](RELEASE_NOTES.md) for the release summary.

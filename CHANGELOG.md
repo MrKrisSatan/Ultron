@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.1.1
+
+- Added explicit balanced level-5 starter plans for Data, R2-D2 and WALL-E in Red, Blue, Yellow, Gold, Silver and Crystal without duplicating the normal laboratory trio.
+- Added an in-game player-to-robot trade flow requiring both trainers to be on the same map.
+- Robot-to-robot and player trades now trigger genuine trade evolutions, including Gen 2 held-item requirements and consumption.
+- Protected starters, Eggs, aces, signature/bonded partners and the robot's final usable party member from trade offers.
+- Added a completely private Gen 2 Day-Care state for every robot; it never reads or mutates the player's party, deposited parents, Egg, breeding counters or flags.
+- Robots physically visit Route 34 to deposit compatible owned parents, continue travelling while the Egg develops, return to collect it and pay their own Day-Care fee.
+- Added Gen 2 Egg Group, gender, Ditto, matching-DV, base-form, hatch-cycle, inherited-DV, shared level-up move and father-side TM/HM/Egg Move rules.
+- Bundled Crystal's canonical Egg Move lists and combined them with the live registry and offline Gen 2 competitive sets when selecting legitimate breeding projects.
+- Bred Pokémon hatch at level 5, retain parent provenance and inherited Egg Moves, enter the robot's party or PC, and are trained through the normal progression system.
+- Added private-state, compatibility, legal Egg Move, fee, parent-return and hatch regressions.
+
 ## 2.1.0
 
 - Moved the one-to-four robot selector into Oak's standard introduction immediately after naming the player in both Gen 1 and Gen 2.
