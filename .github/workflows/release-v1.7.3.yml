@@ -1,5 +1,6 @@
 name: Publish Ultron v1.7.3
 on:
+  workflow_dispatch:
   push:
     branches: [main]
 permissions:
