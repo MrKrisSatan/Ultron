@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.8.0
+
+- Ultron now observes the player's contiguous overworld movement and records recent map exits with their entry and exit coordinates.
+- When strategic navigation fails in a dungeon or interior, Ultron follows the visible player and can reuse the learned exit after the player crosses maps.
+- Player-observed routes can be exported and imported with collective training data, allowing another Ultron to reuse shared dungeon exits.
+- Ultron now learns the player's species, levels and revealed moves from every battle he can physically observe, not only Gym and League battles.
+- Shared training packages now carry player-level evidence alongside route knowledge.
+- A known player level advantage unconditionally suppresses automatic and immediate rematches; Ultron catches when his team has space and Poké Balls, otherwise he trains until the gap closes.
+- Added save-migration and regression coverage for player movement observation, learned exits, portable route/level data and rematch preparation priorities.
+
 ## 1.7.4
 
 - Fixed name-plate projection in wide and survey overworld layouts by mapping through the renderer's world viewport rather than its separate 160x144 UI rectangle.

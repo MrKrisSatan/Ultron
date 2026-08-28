@@ -1,7 +1,7 @@
-# Ultron v1.7.4
+# Ultron v1.8.0
 
-Ultron's name plate now uses the same full world viewport as the overworld renderer. It remains attached in wide-window and survey layouts instead of being displaced through the smaller UI canvas.
+Ultron now learns directly from the player in the overworld and in battle. He records player-travelled dungeon exits, follows the player when his own navigation is lost, and reuses observed exits.
 
-Pokemart supply runs can now reconstruct the missing first route hop from an interior room and walk directly to the staircase or door.
+Observed routes, Pokémon levels, species and moves are included in portable collective training exports so this knowledge can be shared with another Ultron installation.
 
-Ultron can also use eligible healing and status-recovery items during battle when they are present in his inventory. Items used by either generation's battle AI are consumed from that real inventory.
+When Ultron knows the player's team is meaningfully higher-level, he will catch or train instead of repeatedly challenging the player.
