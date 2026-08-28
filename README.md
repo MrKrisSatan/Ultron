@@ -73,10 +73,10 @@ such as perfecting his team, completing the Pokedex, pursuing legendaries, defen
 an unbeaten reign or solving the player's team.
 
 Imported community training data now carries provenance inside Ultron's save.
-Species, move, lead and route evidence remembers how many independent Ultron sources
+Species, move, lead, player-level and observed-exit evidence remembers how many independent Ultron sources
 support it, and collective team planning ranks higher-confidence consensus ahead of
-weak one-off observations. Imported evidence is still not re-exported as if it were
-locally observed.
+weak one-off observations. Portable exports can pass confirmed dungeon exits and
+battle knowledge onward without granting progress, levels, Pokémon or items.
 
 ## Ultron chooses his own appearance
 
@@ -100,7 +100,7 @@ Ultron's saved standalone settings currently include:
 - **Forgettable HMs**: when on, Ultron may optimise an HM move away and later reteach
   the owned HM when physical field travel requires it.
 - **Reusable TMs**: when on, an owned TM remains available after teaching it.
-- **Periodic Challenges**, **News Ticker**, **Name Tag**, **Watch Major Battles**, and
+- **Periodic Challenges**, **News Ticker**, **Name Tag**, **Watch Player Battles**, and
   **Daily Routines** control optional rivalry/presentation behaviours.
 - **Nickname Partners** allows Ultron to give a personal nickname to a Pokemon only
   after a sufficiently strong bond or long service history develops.
@@ -148,7 +148,7 @@ The Start menu's **ULTRON** section includes **PARTNER LEGACY**, showing the str
 
 ## Installation
 
-1. Download `Ultron_v1.7.4.zip` from the GitHub release or `dist/`.
+1. Download `Ultron_v1.8.0.zip` from the GitHub release or `dist/`.
 2. Install/extract it as the `ultron` mod directory so `manifest.json` and
    `main.lua` are at the mod root.
 3. Start Red, Blue, Yellow, Gold, Silver or Crystal.
@@ -164,7 +164,7 @@ competitive data and chat systems remain local to Ultron.
 
 ## Release
 
-Current release: **v1.7.4**. See [CHANGELOG.md](CHANGELOG.md) and
+Current release: **v1.8.0**. See [CHANGELOG.md](CHANGELOG.md) and
 [docs/VALIDATION.md](docs/VALIDATION.md).
 
 
