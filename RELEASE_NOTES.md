@@ -1,7 +1,7 @@
-# Ultron v1.8.1
+# Ultron v2.0.0
 
-The new **Thoughts** page explains Ultron's current objective, destination, navigation recovery, rematch readiness and the player-team evidence behind his decisions.
+Ultron is now a society of up to four autonomous robot rivals. New saves choose the population during opening setup: Ultron, Data, R2-D2 and WALL-E. Existing saves migrate safely to one Ultron.
 
-The new **Knowledge** page shows what Ultron has learned from the player and other installations. Route exits now include confidence and provenance, distinguishing witnessed, self-discovered and imported information.
+Every robot has an independent team, PC, inventory, money supply, badge journey, physical location, memory and personality. The Start menu can select an individual robot and inspect the relationship network.
 
-Repeated confirmations strengthen a route. Imported claims remain less trusted than exits Ultron directly witnesses, and competing exits are chosen using confidence before recency.
+Robots meet, share attributed information, trade, battle with their real teams and money, remember one another's strategies and develop friendships, mentorships, rivalries, feuds and Championship ambitions. Falling behind a peer drives legitimate catching and training rather than free progress.
