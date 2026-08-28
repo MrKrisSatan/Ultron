@@ -1,7 +1,7 @@
 {
   "id": "ultron",
   "name": "Ultron",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "api": 2,
   "entry": "main.lua",
   "profile": "content",
