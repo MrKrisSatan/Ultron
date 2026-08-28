@@ -1,0 +1,34 @@
+{
+  "id": "ultron",
+  "name": "Ultron",
+  "version": "1.7.0",
+  "api": 2,
+  "entry": "main.lua",
+  "profile": "content",
+  "category": "GAMEPLAY",
+  "game_version": ">=0.1.37 <2.0.0",
+  "games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold",
+    "silver",
+    "crystal"
+  ],
+  "priority": 75,
+  "dependencies": [],
+  "optional_dependencies": [
+    "the_world",
+    "colosseum_ui_overhaul"
+  ],
+  "conflicts": [],
+  "incompatible": [],
+  "permissions": [
+    "engine_internals"
+  ],
+  "gen2compat": true,
+  "affects_link": true,
+  "description": "Standalone autonomous Pokemon rival with legitimate physical progression, symmetric player money stakes, guide-aware team preparation, live modded-species knowledge, fishing and special-activity integrations, persistent partner chronicles, competitive memory, and optional integration with The World.",
+  "credits": "Concept and specification: Christopher Robert Porter. Standalone AI engine extracted and adapted from The World v6.70.9 AI Rivals architecture. Offline Smogon Gen 1/Gen 2 competitive snapshot retained with attribution in docs/SMOGON_DATA_NOTICE.md.",
+  "github": "MrKrisSatan/Ultron"
+}
