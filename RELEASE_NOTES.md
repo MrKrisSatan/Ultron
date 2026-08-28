@@ -1,7 +1,7 @@
-# Ultron v1.8.0
+# Ultron v1.8.1
 
-Ultron now learns directly from the player in the overworld and in battle. He records player-travelled dungeon exits, follows the player when his own navigation is lost, and reuses observed exits.
+The new **Thoughts** page explains Ultron's current objective, destination, navigation recovery, rematch readiness and the player-team evidence behind his decisions.
 
-Observed routes, Pokémon levels, species and moves are included in portable collective training exports so this knowledge can be shared with another Ultron installation.
+The new **Knowledge** page shows what Ultron has learned from the player and other installations. Route exits now include confidence and provenance, distinguishing witnessed, self-discovered and imported information.
 
-When Ultron knows the player's team is meaningfully higher-level, he will catch or train instead of repeatedly challenging the player.
+Repeated confirmations strengthen a route. Imported claims remain less trusted than exits Ultron directly witnesses, and competing exits are chosen using confidence before recency.

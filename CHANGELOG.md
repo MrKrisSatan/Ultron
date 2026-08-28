@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.8.1
+
+- Added **Thoughts** pages to both Ultron menus, explaining his current goal, destination, rematch readiness, navigation recovery and known player level comparison.
+- Added a **Knowledge** page showing learned exits, observation counts, collective sources and each displayed route's confidence and provenance.
+- Route knowledge now distinguishes player-witnessed, self-discovered and imported evidence; repeated confirmations increase confidence.
+- Imported route confidence is deliberately capped below directly witnessed evidence, and conflicting exits are selected by confidence before recency.
+- Collective training exports retain route confidence while remaining compatible with v1 training packages.
+- Added regressions for route provenance, confidence exchange, preparation explanations and knowledge-page output.
+
 ## 1.8.0
 
 - Ultron now observes the player's contiguous overworld movement and records recent map exits with their entry and exit coordinates.
