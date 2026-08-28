@@ -1,7 +1,7 @@
 {
   "id": "ultron",
   "name": "Ultron",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "api": 2,
   "entry": "main.lua",
   "profile": "content",
@@ -21,14 +21,18 @@
     "the_world",
     "colosseum_ui_overhaul"
   ],
-  "conflicts": [],
-  "incompatible": [],
+  "conflicts": [
+    "double_battles"
+  ],
+  "incompatible": [
+    "double_battles"
+  ],
   "permissions": [
     "engine_internals"
   ],
   "gen2compat": true,
   "affects_link": true,
-  "description": "Standalone autonomous Pokemon rival with legitimate physical progression, symmetric player money stakes, guide-aware team preparation, live modded-species knowledge, fishing and special-activity integrations, persistent partner chronicles, competitive memory, and optional integration with The World.",
-  "credits": "Concept and specification: Christopher Robert Porter. Standalone AI engine extracted and adapted from The World v6.70.9 AI Rivals architecture. Offline Smogon Gen 1/Gen 2 competitive snapshot retained with attribution in docs/SMOGON_DATA_NOTICE.md.",
+  "description": "Standalone autonomous Pokemon robot rivals with legitimate progression, optional player companionship, companion-only double battles, independent companion battle AI, persistent chronicles, competitive memory, and optional integration with The World.",
+  "credits": "Concept and specification: Christopher Robert Porter. Standalone AI engine extracted and adapted from The World v6.70.9 AI Rivals architecture. Companion double-battle engine adapted from Double Battles v0.6.1 by shanehudson-gen1recomp-mods. Offline Smogon Gen 1/Gen 2 competitive snapshot retained with attribution in docs/SMOGON_DATA_NOTICE.md.",
   "github": "MrKrisSatan/Ultron"
 }
