@@ -1,9 +1,7 @@
-# Ultron v1.7.3
+# Ultron v1.7.4
 
-Ultron's name plate now projects through the real camera-owning overworld state instead of the public World API facade, which does not expose map scrolling.
+Ultron's name plate now uses the same full world viewport as the overworld renderer. It remains attached in wide-window and survey layouts instead of being displaced through the smaller UI canvas.
 
-The plate remains attached to Ultron's live sprite as he walks and as the camera scrolls around the map.
+Pokemart supply runs can now reconstruct the missing first route hop from an interior room and walk directly to the staircase or door.
 
 Ultron can also use eligible healing and status-recovery items during battle when they are present in his inventory. Items used by either generation's battle AI are consumed from that real inventory.
-
-Supply runs now correctly leave interior rooms through their local staircase or doorway, including `LAST_MAP` return warps used by the player's bedroom, instead of walking in circles.
