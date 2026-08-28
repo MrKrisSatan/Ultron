@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.4
+
+- Fixed name-plate projection in wide and survey overworld layouts by mapping through the renderer's world viewport rather than its separate 160x144 UI rectangle.
+- Fixed Pokemart supply runs remaining in the player's bedroom when the strategic graph cannot start a route from an interior reverse warp.
+- Interior travel now reconstructs the first hop from live warp definitions and reachable neighbouring maps before local pathfinding begins.
+- Added regressions for wide-world name-plate projection and recovery from a missing interior route.
+
 ## 1.7.3
 
 - Fixed the name plate using the camera-less public World API facade for projection, which left it displaced by the map's scroll offset.
