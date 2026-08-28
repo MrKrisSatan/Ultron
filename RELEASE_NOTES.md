@@ -1,5 +1,5 @@
-# Ultron v1.7.1
+# Ultron v1.7.2
 
-Message Ultron can now be cancelled with B while the field is empty. Sending or cancelling reliably closes the keyboard in both Gen 1 and Gen 2.
+BATTLE ME NOW now resolves the live overworld from the current client screen stack, fixing valid challenges that previously ended with “the game client refused to start the battle.”
 
-Ultron's name plate is now restricted to the active overworld and follows the exact visible frame origin of his live sprite, including custom-size sprite replacements. It no longer appears over menus, message keyboards, text boxes, battles or transitions.
+The launcher also has a scoped built-in trainer shell fallback and reports a specific client capability if a future host cannot launch the fight.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.2
+
+- Fixed BATTLE ME NOW on current Gen1Recomp builds that expose the live overworld through the screen stack instead of `game.overworld`.
+- Added a safe built-in trainer-class fallback when the custom trainer registry is unavailable at battle construction time; Ultron's real party still replaces the shell through the scoped party hook.
+- Updated Gen 2 launching to use the same authoritative live-overworld resolver and to respect an explicit `startBattle` refusal.
+- Battle launch failures now report the exact failed client capability instead of only a generic refusal.
+
 ## 1.7.1
 
 - Fixed Message Ultron so B exits immediately when the message field is empty, while B continues to delete entered characters.
