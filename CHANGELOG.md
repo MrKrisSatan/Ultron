@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.0.0
+
+- Added a new-save opening selector for one to four autonomous robot rivals, capped at four.
+- Added Data, R2-D2 and WALL-E with scholar, explorer and collector personalities alongside Ultron's competitive strategist identity.
+- Migrated the standalone engine from one serialized rival to an independently serialized roster while preserving `engine.rival` and all existing one-Ultron saves.
+- Each robot owns its own Pokémon, PC, items, money, badges, position, objectives, opponent memory, confidence and relationship bonds.
+- Added multi-robot physical spawning, independent movement, attached nameplates, interaction targeting and player battle ownership.
+- Added **ROBOT RIVALS** selection and **RELATIONSHIP NETWORK** pages to the Start-menu Ultron section.
+- Activated the existing rival skirmish, legitimate prize transfer, team observation, counter-building, trading, Championship and relationship systems for the standalone roster.
+- Added same-map knowledge exchange with source attribution and shared-journey relationship effects.
+- Added rivalry pressure: agents behind a peer in badges or levels prioritise legitimate catches or training.
+- Added migration, four-agent construction, selection, serialization, information exchange, relationship and motivation regressions.
+
 ## 1.8.1
 
 - Added **Thoughts** pages to both Ultron menus, explaining his current goal, destination, rematch readiness, navigation recovery and known player level comparison.

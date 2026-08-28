@@ -52,6 +52,16 @@ optional integration such as sharing the existing AI-rival news ticker.
   personal chat history. Imported collective knowledge is absorbed into Ultron's persistent user/save data outside the mod directory, so replacing the mod during an
   update does not erase it.
 
+## Robot rival society
+
+New saves now choose **one to four robot rivals** during Ultron's opening setup. Ultron is always slot one; additional slots are **Data**, **R2-D2** and **WALL-E**, each using a distinct autonomous personality and maintaining an independent party, PC, inventory, money supply, badges, map position, objectives, memories and relationships. Existing saves migrate to one Ultron and keep all prior progress.
+
+The robots physically appear together when they reach the player's map, have independently attached nameplates and can be selected from **ROBOT RIVALS** in the Start menu. Talking to a visible robot selects that individual for status, Thoughts, Knowledge and **Battle Me Now**.
+
+Robots can meet and battle one another with their real teams, carry damage forward, transfer legitimate prize money, remember revealed teams, build counters, trade eligible duplicate Pokémon and challenge for the Championship. Their shared relationship graph develops through contests and cooperation into friendships, mentorships, competitive respect, rivalries, feuds or arch-rivalries.
+
+Same-map meetings allow information exchange. Shared opponent and travel knowledge records who passed it on, while direct observations remain more trusted. A robot falling behind another in badges or levels gains peer pressure and prioritises legitimate catching or training instead of receiving free progress.
+
 ## Rivalry, legacy and collective learning
 
 Ultron now builds a persistent career history around the player rather than treating
@@ -148,7 +158,7 @@ The Start menu's **ULTRON** section includes **PARTNER LEGACY**, showing the str
 
 ## Installation
 
-1. Download `Ultron_v1.8.1.zip` from the GitHub release or `dist/`.
+1. Download `Ultron_v2.0.0.zip` from the GitHub release or `dist/`.
 2. Install/extract it as the `ultron` mod directory so `manifest.json` and
    `main.lua` are at the mod root.
 3. Start Red, Blue, Yellow, Gold, Silver or Crystal.
@@ -164,7 +174,7 @@ competitive data and chat systems remain local to Ultron.
 
 ## Release
 
-Current release: **v1.8.1**. See [CHANGELOG.md](CHANGELOG.md) and
+Current release: **v2.0.0**. See [CHANGELOG.md](CHANGELOG.md) and
 [docs/VALIDATION.md](docs/VALIDATION.md).
 
 
