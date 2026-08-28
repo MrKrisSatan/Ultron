@@ -89,8 +89,8 @@ mods may still replace the artwork behind the logical sprite id.
 ## Start menu and configurable Ultron rules
 
 The normal game Start menu now contains a dedicated **ULTRON** section. It gives
-quick access to status/party information, settings, training-data import/export,
-message input, the latest news update and Ultron achievements. The deeper in-world
+quick access to status/party information, **Thoughts**, **Knowledge**, settings,
+training-data import/export, message input, the latest news update and Ultron achievements. **Thoughts** explains his current goal, destination, rematch readiness, navigation pressure and the evidence behind his player-team model. **Knowledge** lists learned route exits with confidence and provenance, observed battles and collective sources. The deeper in-world
 Ultron interaction menu remains available when you physically meet him.
 
 Ultron's saved standalone settings currently include:
@@ -148,7 +148,7 @@ The Start menu's **ULTRON** section includes **PARTNER LEGACY**, showing the str
 
 ## Installation
 
-1. Download `Ultron_v1.8.0.zip` from the GitHub release or `dist/`.
+1. Download `Ultron_v1.8.1.zip` from the GitHub release or `dist/`.
 2. Install/extract it as the `ultron` mod directory so `manifest.json` and
    `main.lua` are at the mod root.
 3. Start Red, Blue, Yellow, Gold, Silver or Crystal.
@@ -164,7 +164,7 @@ competitive data and chat systems remain local to Ultron.
 
 ## Release
 
-Current release: **v1.8.0**. See [CHANGELOG.md](CHANGELOG.md) and
+Current release: **v1.8.1**. See [CHANGELOG.md](CHANGELOG.md) and
 [docs/VALIDATION.md](docs/VALIDATION.md).
 
 
