@@ -1,0 +1,112 @@
+# Changelog
+
+## 1.7.0
+- Fixed BATTLE ME NOW falsely reporting that Ultron is off-map when his live NPC is visibly beside the player.
+- Added symmetric player battle prize money: the loser pays from their actual purse and the winner receives the paid amount.
+- Ultron now loses money on trainer/wild blackouts before returning to his last visited Center or home.
+- Added Gen 1/Gen 2 Gym guide preparation, including legitimate counter-hunting for Whitney's Miltank.
+- Added a live species-knowledge index covering all Pokemon registered by the game or installed mods, including learnsets, evolutions and compatibility data.
+- Expanded encounter discovery to grass, water, fishing rods and time-of-day tables, allowing legal catches from installed encounter providers.
+- Added optional AI adapters for fishing, Bug-Catching Contests, Safari Zones, Wonder Trade and Mystery Gift.
+- Expanded evolution handling to registered level, friendship, stone/item and trade-stone methods; required items are consumed.
+- Audited story isolation: Ultron retains private badges/campaign state, never writes player story flags, and must own and teach required HMs for physical travel.
+- Added regression coverage for map authority, money transfers, blackout stakes, guide knowledge, encounter breadth, activity adapters and evolution prerequisites.
+
+## 1.6.0
+- Fixed the post-blackout home stall: Ultron no longer overwrites the AI decision made after healing, so he physically resumes his journey after waking at home/Center.
+- Added persistent loss-driven Determination. Losing to the player temporarily increases training, Center counter-preparation and legal same-map rematch pressure.
+- Counter-building remains observation-limited: Ultron uses only Pokemon/moves actually revealed in battles he fought or physically observed, plus separately imported collective priors. No hidden player party inspection is introduced.
+- Home is no longer treated as a hidden Pokemon Center/Pokemart. Counter-team PC/TM work waits for a real Center and purchases/sales wait for a real Mart.
+- Added explicit Colosseum Inspired UI compatibility (`colosseum_ui_overhaul`) as an optional dependency. Name tag/news draw after its final HUD layers and name-tag projection now has a robust window/letterbox fallback when normal viewport fields are absent.
+- Moved BATTLE ME NOW to the top of Ultron's direct interaction menu so it remains visible in Colosseum's shorter hanging generic-list viewport.
+- Added Partner Chronicle: famous Gym/League/player/title/rematch victories, opponent-specific partner trust, and browsable historical Hall of Fame pages.
+- Anti-player team selection can modestly recall partners with proven PLAYER trust, without changing stats or creating Pokemon/items.
+
+## 1.5.0
+
+- Added persistent per-Pokemon bond identities so duplicate species keep separate histories.
+- Added individual partner battle records: trainer, Gym, League and player wins/losses, blackouts, comeback rematches and Hall of Fame appearances.
+- Added partner progression tiers: Rookie, Trusted Partner, Veteran, Hall of Famer and Ultron Legend.
+- Hall of Fame teams now preserve individual bond IDs as well as species/nickname data.
+- Signature partners now lock to the individual Pokemon rather than only its species.
+- Veteran loyalty influences voluntary team selection without modifying stats.
+- Proven player-match partners receive a modest recall preference for anti-player rematch teams.
+- Added PARTNER LEGACY to the Start-menu Ultron section.
+- Added OLD GUARD, COMEBACK PROTOCOL and DYNASTY achievements.
+- Ultron conversation can reference his signature partner's personal battle/Hall-of-Fame history.
+
+## 1.4.0
+
+- Fixed the white-screen regression when leaving Ultron Settings: child menus no longer trigger a second stack pop that can remove the underlying overworld screen.
+- Audited every player-facing Ultron page and return path, including direct NPC interaction, Start -> ULTRON, Settings, Training Data, text pages, Back and B/Cancel navigation.
+- Training-data import now runs through a game/client file picker instead of a hard-coded sidecar filename.
+- Imported collective knowledge is merged into Ultron's persistent save/user-data state outside `mods/ultron`, so normal mod updates do not overwrite it.
+- Desktop export now uses a native Save-As dialog and writes the training package to the exact destination selected by the player.
+- Android/iOS import now reuses Gen1Recomp's engine-owned system document picker with a feature-specific ownership marker around the shared staging file.
+- Added attachment-driven Pokemon nicknames. Ultron may nickname a Pokemon only after sufficient personal bond, signature-partner status, or sustained active-party service.
+- Personal nicknames persist on the individual Pokemon through save/load, evolution and PC movement, and never grant artificial stat bonuses.
+- Added PARTNER BONDS to the Ultron dashboard, nickname/species display in party history, and the NICKNAME PARTNERS setting.
+- Added the NAMING RIGHTS achievement for Ultron giving a bonded Pokemon a personal nickname.
+- Battle-party and Hall-of-Fame snapshots now preserve Ultron-assigned nicknames where the host display supports them.
+
+## 1.3.0
+
+- Added persistent Ultron gameplay settings with existing-save migration and all current defaults preserving previous behaviour.
+- Added toggles for Catch Legendaries, Forgettable HMs, Reusable TMs, Periodic Challenges, News Ticker, Name Tag, Watch Major Battles, and Daily Routines.
+- Catch Legendaries OFF now filters legendary species from both autonomous hunt selection and the legal catch candidate pool while still allowing research/observation.
+- Reusable TM and Forgettable HM rules now use Ultron's own standalone settings instead of inherited World option keys.
+- Added a dedicated Start -> ULTRON quick-access section with Status/Party, Settings, Import Training Data, Export Training Data, Message Ultron, Latest Update and Achievements.
+- Added an Ultron name tag renderer anchored to the live NPC when a safe 2D screen/camera projection is available.
+- Added persistent Ultron achievements tied to actual career history: First Blood, Not Again, Signature Bond, Machine Champion, Cartographer, Collective Mind and Legend Thief.
+- Achievement unlocks can appear in the news ticker and are visible from the Start-menu Ultron section.
+- Optional presentation/rivalry systems can be disabled without disabling Ultron's physical progression, economy, blackout rules, identity or League journey.
+
+## 1.2.1
+
+- Removed the experimental manifest flag.
+- Fixed standalone existing-save bootstrap on host builds that expose `game.world` without a Gen 1-style `game.stack`.
+- Added standalone NPC materialisation through `game.world.spawnNpc` / `game.world.addRuntimeObject` in addition to the existing WorldAPI and OverworldState paths.
+- Added static-collision placement fallback when `MapOverview` is unavailable, while remaining fail-closed on unproven cells.
+- Keeps the Engine's live game pointer synchronized after save/overworld transitions.
+- Expanded in-game Ultron Diagnostics to distinguish dormant, off-map, unpositioned, and runtime-spawn failures.
+- Existing saves still do not teleport Ultron to the player: a newly installed Ultron begins from his canonical starting area and physically travels from there.
+
+## 1.1.1
+
+- Fixed a startup syntax error in the identity-monitoring module on gen1recomp's Lua 5.1-style mod parser.
+- Replaced the Lua 5.3-only binary XOR operator with a Lua 5.1-compatible arithmetic checksum.
+- Added a release-time Lua 5.1 compatibility audit so unsupported bitwise operators, integer division and goto/labels are rejected before packaging.
+- No gameplay behavior from v1.1.0 was removed. Rivalry, signature partner, Hall of Fame, failure memory and collective-training systems remain intact.
+
+## 1.1.0
+
+- Added persistent rivalry stages: Unknown, Rival, Nemesis, Respected Rival, Champion Challenger and Legendary Rival.
+- Added a 64-entry player battle notebook with map, result, both known teams and Ultron's team anchor.
+- Added relationship-derived signature partners. After enough shared battles, Ultron permanently chooses one partner from actual service history; ordinary PC rotation will not voluntarily box it.
+- Added persistent location/failure memory for blackouts, trainer losses, Gym losses and League failures.
+- Added a personal Hall of Fame that archives each League-winning team instead of overwriting Champion history.
+- Added deterministic post-Champion objectives, including perfect-team, Pokedex, legendary-hunt, unbeaten-reign and player-counter goals.
+- Added collective-training provenance and confidence. Imported species/move/lead/map evidence now records how many independent Ultron sources support it, and team planning prioritizes stronger consensus.
+- Added Rivalry / Legacy and Training Sources panels to the Ultron menu and grounded chat responses for rivalry, signature partners, Hall of Fame and collective knowledge.
+- Rivalry stage and post-Champion goals now influence same-map challenge cadence and competitive preparation frequency.
+- Fixed standalone player battle records being incremented twice per battle.
+- Synced against the current `MrKrisSatan/Ultron` GitHub v1.0.0 archive before applying this release; the upstream archive matched the local v1.0.0 baseline exactly.
+
+## 1.0.0
+
+- Removed The World as a required dependency; Ultron now vendors and loads its
+  own 37-module AI core.
+- Added standalone Gen 1/Gen 2 map graph, physical collision travel, battle
+  simulation, catching, economy, Gym/League progression and competitive data.
+- Added persistent Ultron-only identity, canonical starter rules and private
+  money/inventory/PC state.
+- Added Ultron-selected first-save appearance, locked for the rest of the save.
+- Added same-map autonomous player challenges.
+- Added physical route travel with fail-closed collision and real map transitions.
+- Added trainer-coordinate approach before required campaign trainer battles when
+  the map data exposes a physical trainer position.
+- Blackout now returns only to the last visited Pokémon Center or player home.
+- Added standalone news ticker and optional merge into The World's AI-rival ticker.
+- Added chat input, bounded dialogue memory and battle-history grounding.
+- Added offline Smogon-backed competitive team preparation.
+- Added portable community training-data export/import with source de-duplication.
