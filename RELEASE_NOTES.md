@@ -1,5 +1,9 @@
-# Ultron v1.7.2
+# Ultron v1.7.3
 
-BATTLE ME NOW now resolves the live overworld from the current client screen stack, fixing valid challenges that previously ended with “the game client refused to start the battle.”
+Ultron's name plate now projects through the real camera-owning overworld state instead of the public World API facade, which does not expose map scrolling.
 
-The launcher also has a scoped built-in trainer shell fallback and reports a specific client capability if a future host cannot launch the fight.
+The plate remains attached to Ultron's live sprite as he walks and as the camera scrolls around the map.
+
+Ultron can also use eligible healing and status-recovery items during battle when they are present in his inventory. Items used by either generation's battle AI are consumed from that real inventory.
+
+Supply runs now correctly leave interior rooms through their local staircase or doorway, including `LAST_MAP` return warps used by the player's bedroom, instead of walking in circles.
