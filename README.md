@@ -158,7 +158,7 @@ The Start menu's **ULTRON** section includes **PARTNER LEGACY**, showing the str
 
 ## Installation
 
-1. Download `Ultron_v2.0.0.zip` from the GitHub release or `dist/`.
+1. Download [`Ultron_v2.0.0.zip`](https://github.com/MrKrisSatan/Ultron/releases/download/v2.0.0/Ultron_v2.0.0.zip) from the GitHub release.
 2. Install/extract it as the `ultron` mod directory so `manifest.json` and
    `main.lua` are at the mod root.
 3. Start Red, Blue, Yellow, Gold, Silver or Crystal.
@@ -174,7 +174,7 @@ competitive data and chat systems remain local to Ultron.
 
 ## Release
 
-Current release: **v2.0.0**. See [CHANGELOG.md](CHANGELOG.md) and
+Current release: **[v2.0.0](https://github.com/MrKrisSatan/Ultron/releases/tag/v2.0.0)**. See [CHANGELOG.md](CHANGELOG.md) and
 [docs/VALIDATION.md](docs/VALIDATION.md).
 
 
