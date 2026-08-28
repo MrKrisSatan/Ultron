@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.1.0
+
+- Moved the one-to-four robot selector into Oak's standard introduction immediately after naming the player in both Gen 1 and Gen 2.
+- Added a persistent developing voice profile for Ultron, Data, R2-D2 and WALL-E, shaped by player-battle wins, losses and repeated meetings.
+- Every player challenge now begins with the attacking robot's current thought in the game's standard text box; the battle starts only after the text is closed.
+- Completely rewrote the README around the one-to-four robot roster, independent progression, relationships, evolving dialogue, companions and double battles.
+
+- Added same-map **ACCOMPANY ME** and **STOP ACCOMPANYING** actions for every robot personality, with one persistent companion at a time.
+- Embedded the required Double Battles v0.6.1 battle, turn-order, targeting, switching, faint, experience, HUD and compatibility machinery.
+- Double battles now activate only while a robot accompanies the player; ordinary play remains single-battle only.
+- Companion Pokémon come from the selected robot's persistent party and are controlled exclusively by that robot.
+- Once one opposing wild Pokémon has fainted, a companion with an owned Poké Ball can spend its turn making a normal generation-specific capture attempt. Successful captures join that robot's party or PC, never the player's collection.
+- The player and every robot are now prevented from throwing a Poké Ball while two opposing Pokémon remain active. The player's selected ball is returned and the battle explains that aiming at two Pokémon is impossible.
+- Added doubles training for focus fire, safe foe-wide attacks, ally-damaging spread avoidance, survival and personality-weighted support decisions.
+- Declared the standalone `double_battles` mod incompatible to prevent two battle decorators from competing.
+- Added companion persistence and double-battle decision regressions.
+
 ## 2.0.0
 
 - Added a new-save opening selector for one to four autonomous robot rivals, capped at four.

@@ -1,7 +1,9 @@
-# Ultron v2.0.0
+# Ultron v2.1.0
 
-Ultron is now a society of up to four autonomous robot rivals. New saves choose the population during opening setup: Ultron, Data, R2-D2 and WALL-E. Existing saves migrate safely to one Ultron.
+Ultron v2.1.0 integrates the one-to-four robot selection directly into Oak's introduction. In both Gen 1 and Gen 2, Oak asks how many robot rivals should inhabit the save immediately after the player finishes naming themselves.
 
-Every robot has an independent team, PC, inventory, money supply, badge journey, physical location, memory and personality. The Start menu can select an individual robot and inspect the relationship network.
+Ultron, Data, R2-D2 and WALL-E now maintain persistent individual voice profiles. Their speech develops through repeated player battles: victories build confidence, defeats increase analysis and adaptation, and long histories produce more established rivalry dialogue.
 
-Robots meet, share attributed information, trade, battle with their real teams and money, remember one another's strategies and develop friendships, mentorships, rivalries, feuds and Championship ambitions. Falling behind a peer drives legitimate catching and training rather than free progress.
+Before any robot challenges the player, its current thought appears in the game's standard text box. The battle begins only after the player closes that message.
+
+This release also embeds companion-only double battles, independent companion battle control, companion captures after one wild opponent faints, and the hard two-target Poké Ball refusal for both the player and robot trainers.
