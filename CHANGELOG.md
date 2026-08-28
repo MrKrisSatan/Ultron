@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.7.3
+
+- Fixed the name plate using the camera-less public World API facade for projection, which left it displaced by the map's scroll offset.
+- Name plate projection now resolves the real camera-owning overworld state from the active screen stack before using compatibility fallbacks.
+- Added regression coverage proving the plate moves exactly one screen pixel for every one-pixel camera scroll while remaining anchored to Ultron's live sprite frame.
+- Ultron now supplies his legitimately owned healing and status-recovery items to the battle AI, and every used item is consumed from his persistent inventory.
+- Added regression coverage for Gen 1 item selection, locked actions, empty inventory handling, and Gen 2 post-battle inventory reconciliation.
+- Fixed supply-run navigation looping inside the player's room by resolving `LAST_MAP` interior exits to their real local stair or doorway tile.
+- Strategic travel now waits for valid exit metadata instead of falling back to random room wandering when a next map is already known.
+
 ## 1.7.2
 
 - Fixed BATTLE ME NOW on current Gen1Recomp builds that expose the live overworld through the screen stack instead of `game.overworld`.
