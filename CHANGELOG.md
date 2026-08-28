@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.1
+
+- Fixed Message Ultron so B exits immediately when the message field is empty, while B continues to delete entered characters.
+- Fixed message completion and cancellation stack handling in both Gen 1 and Gen 2 clients, including Gen 2's caller-owned keyboard close.
+- Name plates are now suppressed behind every menu, text box, naming keyboard, battle and transition.
+- Anchored Ultron's name plate to the live renderer's exact sprite frame origin, including custom-size and re-anchored overworld sprites.
+
 ## 1.7.0
 - Fixed BATTLE ME NOW falsely reporting that Ultron is off-map when his live NPC is visibly beside the player.
 - Added symmetric player battle prize money: the loser pays from their actual purse and the winner receives the paid amount.
