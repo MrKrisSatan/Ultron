@@ -1,0 +1,111 @@
+name: Publish Ultron v2.34.0
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout complete staging payload
+        uses: actions/checkout@v4
+        with:
+          ref: release/stage-v2.34.0
+
+      - name: Rebuild v2.34.0 package
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat release_payload/v234_patch.part*.b64 > /tmp/v234_patch.b64
+          base64 -d /tmp/v234_patch.b64 > /tmp/v230_to_v234.patch.gz
+          gunzip -c /tmp/v230_to_v234.patch.gz > /tmp/v230_to_v234.patch
+
+          curl -L --fail --retry 3 \
+            -o /tmp/Ultron_v2.30.0.zip \
+            https://github.com/MrKrisSatan/Ultron/releases/download/2.30.0/Ultron_v2.30.0.zip
+
+          mkdir -p /tmp/build/ultron
+          unzip -q /tmp/Ultron_v2.30.0.zip -d /tmp/build/ultron
+          cd /tmp/build
+          patch -p0 --batch < /tmp/v230_to_v234.patch
+
+          cd /tmp/build/ultron
+          zip -qr /tmp/Ultron_v2.34.0.zip .
+          unzip -t /tmp/Ultron_v2.34.0.zip
+          sha256sum /tmp/Ultron_v2.34.0.zip | tee /tmp/Ultron_v2.34.0.sha256
+
+      - name: Create exact v2.34.0 source tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --tags "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" refs/tags/2.34.0 >/dev/null 2>&1; then
+            echo "Tag 2.34.0 already exists"
+          else
+            cd /tmp/build/ultron
+            git init -q
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+            git fetch -q --depth=1 origin main
+            find . -type f -not -path './.git/*' -print0 | xargs -0 git add --
+            TREE_SHA="$(git write-tree)"
+            COMMIT_SHA="$(printf '%s\n' 'Ultron v2.34.0 release source' | git commit-tree "$TREE_SHA" -p FETCH_HEAD)"
+            git tag 2.34.0 "$COMMIT_SHA"
+            git push -q origin refs/tags/2.34.0
+          fi
+
+      - name: Build release notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          HASH="$(cut -d' ' -f1 /tmp/Ultron_v2.34.0.sha256)"
+          {
+            printf '%s\n\n' '# Ultron v2.34.0'
+            printf '%s\n\n' 'Ultron now supports up to seven persistent autonomous robot agents sharing one Pokémon world, with expensive reasoning kept inside the bounded scheduler so deeper AI does not require seven always-on planners.'
+            printf '%s\n' 'Highlights:'
+            printf '%s\n' '- Save-specific DNA and non-retirement character progression arcs'
+            printf '%s\n' '- Standalone tournament circuit with nine formats and competitive seasons'
+            printf '%s\n' '- Champion lineage, eras, dynasties and challenger adaptation'
+            printf '%s\n' '- Independent Pokédex projects and physical public battle scouting'
+            printf '%s\n' '- Adaptive tactical growth without stat, RNG or resource cheating'
+            printf '%s\n' '- Robot-driven World Story News and situation-specific dialogue for all seven agents'
+            printf '%s\n' '- Hall of Fame historical replay/archive'
+            printf '%s\n' '- Lightweight scheduler, pathfinding and tournament performance profiler'
+            printf '%s\n' '- Standalone companion double battles, autonomous trading, Gen 2 breeding, finite economy and persistent HP/PP/status'
+            printf '\n%s\n' 'Validation: 101/101 regression audits, 237 Lua files compiled, and 133 protected runtime files passed the regenerated integrity seal.'
+            printf '\n%s `%s`\n' 'Release asset SHA-256:' "$HASH"
+            printf '\n%s\n' 'Use the attached Ultron_v2.34.0.zip as the installable mod package.'
+          } > /tmp/release_notes.md
+
+      - name: Publish release and mark latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view 2.34.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload 2.34.0 /tmp/Ultron_v2.34.0.zip /tmp/Ultron_v2.34.0.sha256 \
+              --repo "$GITHUB_REPOSITORY" --clobber
+            gh release edit 2.34.0 \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Ultron v2.34.0" \
+              --notes-file /tmp/release_notes.md \
+              --draft=false \
+              --prerelease=false \
+              --latest
+          else
+            gh release create 2.34.0 \
+              /tmp/Ultron_v2.34.0.zip \
+              /tmp/Ultron_v2.34.0.sha256 \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Ultron v2.34.0" \
+              --notes-file /tmp/release_notes.md \
+              --latest
+          fi
