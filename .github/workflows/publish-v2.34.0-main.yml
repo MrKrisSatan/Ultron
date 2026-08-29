@@ -16,13 +16,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Rebuild v2.34.0 package
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
           cat release_payload/v234_patch.part*.b64 > /tmp/v234_patch.b64
+          test "$(wc -c < /tmp/v234_patch.b64)" -eq 114100
           base64 -d /tmp/v234_patch.b64 > /tmp/v230_to_v234.patch.gz
           gunzip -c /tmp/v230_to_v234.patch.gz > /tmp/v230_to_v234.patch
-          curl -L --fail --retry 3 -o /tmp/Ultron_v2.30.0.zip https://github.com/MrKrisSatan/Ultron/releases/download/2.30.0/Ultron_v2.30.0.zip
+          test "$(wc -c < /tmp/v230_to_v234.patch)" -eq 337327
+          gh release download 2.30.0 --repo "$GITHUB_REPOSITORY" --pattern 'Ultron_v2.30.0.zip' --dir /tmp
+          echo 'ced2629f3b7ab0c35c5cd2a1412ce8725ef35d67e88f89a438a86e5f27249399  /tmp/Ultron_v2.30.0.zip' | sha256sum -c -
           mkdir -p /tmp/build/ultron
           unzip -q /tmp/Ultron_v2.30.0.zip -d /tmp/build/ultron
           cd /tmp/build
