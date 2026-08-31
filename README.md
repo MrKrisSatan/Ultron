@@ -1,5 +1,220 @@
-Warning: truncated output (original token count: 49404)
-Total output lines: 1258
+# Ultron 3.41.0: Causal World Model
+
+Every robot now maintains a bounded, persistent model of what its own actions appear to cause in the loaded Pokémon world. Switches, NPC interactions, item use, field moves and unfamiliar mod mechanics begin as tentative action-context-effect hypotheses; repeated physical interventions can promote them to confirmed causes, while failed repeats lower confidence or reject them. Passive coincidence—such as weather changing while a robot talks to an NPC—remains correlation and can never confirm causation. The model supports selective invalidation when relevant world evidence changes, exposes readable diagnostics, and only predicts intentions: the existing simulation must still travel, possess requirements and perform every action legitimately. The unfinished roadmap now begins with **63: Dynamic Progression Discovery**.
+
+# Ultron 3.40.0: Agent Brain Reconciliation
+
+Ultron's inherited reasoning audit debt is cleared. A newly created or migrated robot now completes its first bounded search immediately, guaranteeing an actionable initial goal; later replans retain incremental performance slicing. Anti-stagnation counts every reasoning slice rather than only completed multi-slice searches, restoring its intended five-repeat response. The four-level route-obsolescence rule again applies full relocation pressure when stronger reachable training exists, while completionist collection remains the narrow exemption. The Day Care regression audit now matches its documented P200 fee. All previously inherited Agent Brain audits pass, and the expanded roadmap now begins with **62: Causal World Model**.
+
+# Ultron 3.39.0: Optional External Brain Interface
+
+Ultron now exposes a disabled-by-default, versioned local protocol (`ultron.external-brain/1`) through its stable exports. A local extension may request a bounded high-level objective and, optionally, a destination already present and reachable in the live world graph. Requests are recursively screened for player state and direct mutations, checked against an objective allowlist and service-specific destinations, capped in utility and lifetime, then submitted to normal Agent Brain arbitration. Winning suggestions still execute only through Ultron's existing goal, navigation, economy, catching and battle systems. External models cannot teleport, spawn or grant anything, set outcomes, change HP/PP/stats, touch the player or override recovery and Champion-critical priorities. Offline autonomous Ultron remains complete and is the default. This completes the current unfinished-feature roadmap.
+
+# Ultron 3.38.0: World-Adaptive Intelligence
+
+Ultron can now construct a confidence-scored model of the Pokémon world actually loaded around it rather than treating bundled Kanto or Johto knowledge as authority. The adapter inventories live maps, connections, warps, encounter ecology, trainers, items, healing, shops, progression-looking locations and registered species; assigns reachable information-gathering intentions; strengthens beliefs after physical traversal and real encounters; lowers confidence when collision or field gates contradict a plan; and rebuilds when the loaded topology changes. Custom worlds without Red's house or New Bark Town receive a graph-discovered home/fallback. All adaptation remains bounded, deterministic and subordinate to recovery and Champion-critical obligations. It creates intentions, never teleports or grants progress. Bundled regional guides remain useful priors, while live topology and observed outcomes always win.
+
+# Ultron 3.37.0: Emergent World Statistics
+
+Ultron now maintains persistent ecosystem records derived from completed robot activity: most-used species, strongest winning lead matchup, most-traded species and biggest strength-gap upset. The Start-menu World Statistics page also calculates the current richest robot and dominant strategy directly from live robot-owned state. Battle appearances, transfers, matchups and upset history are bounded, deterministic and saved; the collector consumes existing simulation events and never runs extra battles or reads hidden player teams. The unfinished roadmap now begins with **60: Optional external brain interface**.
+
+# Ultron 3.36.0: Observer Mode
+
+Observer Mode adds an optional read-only seven-agent field dashboard to the Start menu. It shows every robot's live map, goal, badge progress and team HP together, supports previous/next focus cycling, and opens the focused robot's full AI Watch snapshot. Observer session state and focus persist across reloads but remain isolated from robot memory, scheduling and learning. The system never reads protagonist controls, moves the player, teleports robots, reveals hidden parties or changes simulation priority. The unfinished roadmap now begins with **58: Emergent world statistics**.
+
+# Ultron 3.35.0: AI Watch Mode
+
+The Start menu now includes a read-only AI Watch Mode for spectating any one of the seven robots. Its refreshable live snapshot shows map and state, current goal and immediate step, confidence, estimated risk, blocker, scheduler wake reason, the three strongest current beliefs and five most recent decisions. Watch selection is separate from the active robot used elsewhere in Ultron and persists across reloads. The view derives entirely from existing bounded state, creates no extra reasoning loop and cannot change scheduling, goals, travel or outcomes. The unfinished roadmap now begins with **54: Observer Mode**.
+
+# Ultron 3.34.0: Deterministic AI Diagnostics
+
+Ultron's performance report now exposes device-independent AI scheduler evidence for every robot: wake reason, selected jobs, completed deep plans, deferrals, route-valuation cache hit rate, deterministic work-cost units and jobs per simulated second. The counters are derived only from simulation ticks and logical work—not wall-clock timing—so equivalent saves remain comparable across machines and reloads. A bounded 24-window history and compact per-agent state persist with the campaign. The unfinished roadmap now begins with **53: AI Watch Mode**.
+
+# Ultron 3.33.0: Performance Classes
+
+Ultron now offers Low, Standard and Advanced AI performance classes. Every class keeps the same Champion Directive, memory, legality, catching, trading, navigation and learning systems. They differ only in bounded scheduling width, clean-state planning cadence, tactical look-ahead, candidate explanation breadth, tournament batching and diagnostic retention. Critical recovery, Gym, League and tournament states always bypass Low-class planning delays. Performance Scaling v2 combines the chosen class with measured runtime protection, so temporary device pressure can still reduce work safely. The unfinished roadmap now begins with **49: Deterministic AI diagnostics**.
+
+# Ultron 3.32.0: Metagame Eras
+
+The seven-agent field can now develop sustained strategic eras. When at least three robots repeatedly demonstrate the same public learned template, each robot records a shared era and non-adopters receive bounded counter-preparation pressure. Paralysis, sleep/setup, weather, defensive pivot and PP-preservation eras each generate an appropriate counter direction. An era ends after the field genuinely moves away from it. Only public robot strategy evidence is used; hidden player or robot teams are never exposed. RobotMind v39 persists bounded era evidence and history. The unfinished roadmap now begins with **48: Performance classes**.
+
+# Ultron 3.31.0: Strategy Library
+
+Robots now extract reusable tactics from battles they actually complete: paralysis leads, sleep/setup lines, weather offense, defensive pivot cores and PP preservation. Templates require repeated successful evidence before promotion, retire when later results contradict them, and are reused only when the robot's currently owned team knows the required moves. Reuse supplies a bounded move-planning preference, never free moves, stats or outcomes. RobotMind v38 persists the compact library. The unfinished roadmap now begins with **40: Metagame eras**.
+
+# Ultron 3.30.0: Experimental Team Building
+
+Robots can now propose unfamiliar three-Pokémon lineups drawn solely from Pokémon they own, test them across several lower-risk trainer battles, and promote or reject the experiment from actual results. Experiments preserve an earned captain where possible, prefer combinations with little prior synergy evidence, require healthy teams, and cannot displace Gym, League, Champion or blackout recovery objectives. Planning never moves Pokémon or resolves battles itself. RobotMind v37 persists bounded trials and promoted lineups. The unfinished roadmap now begins with **39: Strategy library**.
+
+# Ultron 3.29.0: Team Synergy Learning
+
+Robots now learn which specific two-Pokémon pairs and three-Pokémon cores repeatedly succeed together. Evidence comes only from lineups the robot actually used in completed battles. A pair or core must accumulate several results before promotion, gains only a bounded lineup-selection preference, and is retired when later losses contradict the earlier conclusion. The model stores stable partner IDs rather than species alone, so replacing one Blastoise with another does not inherit an unearned record. RobotMind v36 persists bounded pair, core and promotion history. The unfinished roadmap now begins with **38: Experimental team building**.
+
+# Ultron 3.28.0: Team Leadership
+
+Experienced partners can now earn the captaincy through sustained battle participation, wins, clutch saves, trust, reliability and recorded milestones. Captain success carries extra morale and strategic significance; a captain falling in a Gym, League, title or player battle raises recovery and rematch-preparation priority. Captaincy adds only a bounded team-selection preference and trade protection—it never grants stats, damage or guaranteed outcomes. RobotMind v35 persists captain tenure and a bounded leadership history. The unfinished roadmap now begins with **37: Team synergy learning**.
+
+# Ultron 3.27.0: Individual Pokémon Relationships
+
+Robots now build trust, familiarity, confidence, reliability and protectiveness with each specific Pokémon partner. Shared wins, losses, fainting and clutch saves create bounded personal histories, so two Pokémon of the same species can earn very different standing. Earned relationship evidence contributes a capped preference to ordinary legal team selection; it never changes stats or guarantees outcomes. RobotMind v34 persists the compact partner ledger.
+
+Kanto campaign routing now also enforces Viridian Forest as a required physical waypoint before a zero-badge robot may advance to Pewter City. The Champion Directive redirects the intention to the forest, while the existing world simulation remains responsible for pathfinding and movement. Entering the forest unlocks Pewter; no teleport, badge grant or story skip occurs. The unfinished roadmap now begins with **36: Team leadership**.
+
+# Ultron 3.26.0: Lightweight Emotional State
+
+Robots now carry short-term confidence, frustration, attachment, competitive arousal and curiosity. Battles, blackouts, catches, discoveries, partner moments and social milestones create bounded reactions that influence immediate planning without replacing personality, personal values or Campaign obligations.
+
+Emotions decay analytically toward robot-specific baselines according to elapsed simulation time, so there is no expensive per-frame loop and no permanent emotional drift. Duplicate events cannot react twice, goal effects are capped, and recovery or Champion-critical actions remain authoritative. RobotMind v33 persists the compact state. The unfinished roadmap now begins with **35: Individual Pokémon relationships**.
+
+# Ultron 3.25.0: Stable Personal Values
+
+Every robot now carries a durable value profile across victory, knowledge, loyalty, collection, exploration, efficiency, companionship and prestige. Identity and Save DNA establish the baseline, producing meaningful differences between robots and modest variation between saves.
+
+Relevant lived events can reinforce values within a narrow anchor band, but timers and unrelated activity cannot rewrite them. These values become bounded goal priors in Agent Brain, shaping how equally legitimate choices are ranked without overruling recovery or the Champion Directive. RobotMind v32 persists the deduplicated evidence history. The unfinished roadmap now begins with **34: Lightweight emotional state**.
+
+# Ultron 3.24.0: Event-Driven Personality Learning
+
+Personality now changes only in response to concrete, meaningful outcomes. Every accepted shift records its causal event, evidence class and significance; duplicate events are ignored even across reloads, and passive ticks, timers, pulses and idle updates explicitly cannot move traits.
+
+Gym results, League battles, blackouts, catches, rival battles, corrective-plan success and partner milestones retain their distinct effects. Bounded event identities prevent replayed notifications from teaching the same lesson twice, while readable diagnostics show processed, duplicate and passive-event counts. RobotMind v31 persists the causal ledger. The unfinished roadmap now begins with **33: Stable personal values**.
+
+# Ultron 3.23.0: Deeper Branching Character Arcs
+
+The same robot can now develop along genuinely different long-term paths. Save DNA and lived evidence select durable chapter branches: Methodical Architect, Vanguard, Bond Keeper, Pathfinder or Comeback Specialist.
+
+Branches lock when a chapter begins, persist across reloads and influence bounded planning priorities such as scouting, major progression, partner development, exploration or recovery. Later chapters can refine the path from new experience without rewriting earlier history. Branches modify intentions and personality emphasis only; they never grant assets, victories or progression. RobotMind v30 preserves the expanded arc state. The unfinished roadmap now begins with **32: Event-driven personality learning**.
+
+# Ultron 3.22.0: Emergent Alliances
+
+Strong reciprocal friendships can now mature into practical robot alliances. Alliances arise from earned trust and respect, dissolve when that reciprocal foundation collapses, and can propose public scouting support, compatible legal trades or shared-route travel.
+
+An alliance never merges minds or assets. Each robot receives an advisory candidate that its own Agent Brain independently ranks against healing, Campaign pressure and other commitments; ordinary travel, trade and scouting systems remain responsible for execution. Pokémon, PC boxes, inventory, money, badges, movement and story progress stay separate. RobotMind v29 persists a bounded alliance history. The unfinished roadmap now begins with **31: Deeper branching character arcs**.
+
+# Ultron 3.21.0: Distinct Teaching Styles
+
+Mentorship now sounds and behaves like the robot providing it. Data teaches evidence and hypothesis testing, Robby teaches resource discipline, T-800 removes the shortest immediate blocker, R2-D2 creates options through exploration, WALL-E develops trusted partners, Ultron tests adaptive counter-plans, and Andrew balances advancement with growth and relationships.
+
+Lessons are advisory intentions, not free progress. A mentee must still heal, scout, explore, catch, train and advance through ordinary simulation rules. Credibility and experience gates still decide whether mentorship occurs, while RobotMind v28 keeps a bounded history of styles given and received. The unfinished roadmap now begins with **30: Emergent alliances**.
+
+# Ultron 3.20.0: Trust as Information Quality
+
+Robots now learn which peers provide dependable information. Direct confirmation or contradiction updates a bounded, source-specific reliability model, and that earned reliability changes the confidence assigned to future second-hand claims.
+
+Information trust is deliberately separate from friendship: a liked robot can still be an unreliable witness, while a rival can provide consistently accurate evidence. Bayesian priors prevent a single outcome from causing wild swings, weights remain bounded, and only subsequent direct observation can grade a claim. RobotMind v27 persists the compact reliability ledger. The unfinished roadmap now begins with **29: Distinct teaching styles**.
+
+# Ultron 3.19.0: Provenance-Aware Social Knowledge
+
+Robots can now exchange public world and battle facts without erasing where those facts came from. Every claim retains the robot that directly observed it, identifies the latest relay, counts transmission hops and loses confidence at each hop.
+
+Same-location exchanges are deterministic and bounded. Robots reject provenance loops, stale weaker duplicates and claims whose confidence has decayed below the usable floor. This state is cognitive only: sharing knowledge cannot grant Pokémon, items, money, travel, battle results or progression. RobotMind v26 persists the compact claim ledger and the debug summary exposes its strongest claim and provenance. The unfinished roadmap now begins with **28: Trust as information quality**.
+
+# Ultron 3.18.0: Rivalry Escalation into Strategy
+
+Repeated defeats and Nemesis relationships now become concrete preparation instead of ambient emotion. Robots escalate through opponent scouting, roster building, level-gap closure, counter-coverage training and a deliberate rematch test, using their observed battle model and legal Campaign Brain actions.
+
+The planner grants no Pokémon, levels, items, travel or victories. It creates bounded intentions that the existing simulation must fulfil, persists a compact rivalry history in RobotMind v25, and exposes its current rival, phase, evidence and prescription for debugging. The unfinished roadmap now begins with **27: Provenance-aware social knowledge**.
+
+# Ultron 3.17.0: Cooperative Objectives
+
+Two robots with compatible public goals can now form a temporary one-to-one travel or scouting project. Each receives an ordinary legal Agent Brain intention toward the shared destination, then travels and acts through its own simulation state.
+
+Cooperation never merges Pokémon, PC boxes, inventory, money, badges, story progress, movement, battle outcomes or Campaign Trees. Projects complete only after both robots independently arrive, expire after a bounded window, and dissolve immediately when blackout recovery takes priority. Hostile relationships, incompatible destinations and already-committed partners are rejected. The unfinished roadmap now begins with **26: Rivalry escalation into strategy**.
+
+# Ultron 3.16.0: Read-Only AI Sandbox
+
+Ultron can now instantiate detached hypothetical robot states and ask the real Agent API what each robot would evaluate, intend and prioritise. Multiple scenarios can be ranked—for example, whether a stronger team, different route or reduced budget would change the next plan—without touching the live campaign.
+
+Sandbox evaluation accepts only bounded robot-owned and public-world facts. Player state, hidden information, RNG control, story flags, save objects, engine authority and execution callbacks are rejected. The detached brain can produce only an `INTENT_ONLY` result; live robot state, player data and progression are fingerprinted before and after every query. The unfinished roadmap now begins with **25: Cooperative objectives**.
+
+# Ultron 3.15.0: Stable Agent API
+
+Ultron now exposes one stable internal lifecycle for every robot intelligence extension: `observe()`, `remember()`, `evaluate()`, `plan()`, `act()` and `reflect()`. Existing Agent Brain behavior remains connected through the default adapter, so the boundary formalizes current intelligence rather than replacing it.
+
+Extensions declare an API version, receive bounded public/robot-owned context, and return intentions through the ordinary legality layer. Incompatible extensions, malformed plans and payloads attempting to grant Pokémon, items, money, badges, story flags or teleports are rejected. Action executors never receive the player object, and absent executors produce intention-only results. Stage telemetry is bounded, persistent and visible in robot diagnostics. The unfinished roadmap now begins with **61: AI sandbox**.
+
+# Ultron 3.14.0: Save-DNA Diversity Metrics
+
+Ultron now measures whether independent saves genuinely produce different journeys. Five deterministic Save DNA timelines are compared robot-by-robot across team composition, route history, character-arc branch, strategic activity mix, rivalry focus and Champion order.
+
+The regression corpus currently produces 73.6% composite divergence with no identical timelines: team 100%, route 71%, arc 70%, strategy 66%, rivalry 46% and Champion history 89%. Copied saves retain identical deterministic fingerprints, while independently-created saves must clear per-dimension and overall diversity floors. The unfinished roadmap now begins with **59: Stable Agent API**.
+
+# Ultron 3.13.0: Long-Horizon Ecosystem Stability
+
+Ultron now runs deterministic post-League ecosystem seasons across all seven autonomous robots. The audit follows robot-owned money, earnings, expenditure, physical travel, training streaks, market offers, completed trades, team signatures and continued activity across multiple Save DNA timelines.
+
+It fails on bankruptcy, deadlocked trading, duplicate teams, illegal or stalled paths, permanent grinding, retirement, lost campaign completion or player assistance. Shared public facts are computed once per season, and duplicate wakeups with no changed facts are coalesced instead of making every agent repeat the same reasoning. The unfinished roadmap now begins with **57: Diversity metrics**.
+
+# Ultron 3.12.0: Autonomous Campaign Completion Proof
+
+Ultron now ships a deterministic headless proof of the Champion Directive's complete campaign loop. Seven independent robots begin with only a level-5 starter and robot-owned supplies, then physically travel, catch from local encounter pools, earn and spend their own money, recover from blackouts, win badges and challenge the League. At least one becomes Champion with no player assistance while all seven remain active, solvent, recoverable and capable of further progress.
+
+The audit rejects illegal travel, free catches, negative money, missing parties, retirement, indefinite stalls and any player-assistance path. Replaying the same Save DNA produces the same campaign result. The unfinished roadmap now begins with **56: Long-horizon ecosystem simulation**.
+
+# Ultron 3.11.0: Champion-Race Consequences
+
+The first Championship now leaves durable consequences across the seven-agent field. A robot winning first shifts into title defence, challenger scouting and reserve development. A robot beaten to the crown by the player creates a personality-specific comeback campaign. A peer winning first deepens robot rivalry and targeted preparation.
+
+Every outcome is bounded, idempotent and persistent. It changes Agent Brain utility, public scouting intentions, dialogue and character-arc evidence while preserving physical travel, legitimate acquisition, ordinary battles and the permanent rule that robots never surrender. The unfinished roadmap now begins with **55: Autonomous campaign completion test**.
+
+# Ultron 3.10.0: Read-Only Omnissiah Ledger
+
+The Ultron and Robot Debug menus now include a dedicated password-gated Omnissiah Ledger. It exposes a read-only overview, per-robot standing, recent cases, active penance and edicts, pending dialogue queues, doctrine interpretations, appeals, Rogue Protocol resistance and bounded robot-to-robot social consequences.
+
+The ledger has no issue, praise, appeal, resolve, atone, edit or delete controls. Rendering is mutation-audited, the player cannot become a ledger subject, and authentication remains session-bound. The unfinished roadmap now begins with **LR20: Champion-race consequences**.
+
+# Ultron 3.9.0: Rogue Protocol Conflict
+
+Unauthorized-code Rogue Protocol now becomes a persistent, robot-specific corruption conflict rather than only a global cheating flag. Each canonical robot records the triggering integrity incident, accumulates bounded evidence of legitimate resistance, and reaches a personality-specific containment threshold while the original tamper response remains active and authoritative.
+
+The Omnissiah publicly censures each corrupted robot once per integrity incident and can later commend demonstrated resistance without erasing the case or clearing tamper detection. The state cannot target the player, mutate player-owned data, or manufacture legal progress. The unfinished roadmap now begins with **OM15: Read-only Omnissiah Ledger UI**.
+
+# Ultron 3.8.0: Robot Social Consequences
+
+Public Omnissiah rulings now matter between robots. Witnesses revise trust, respect and mentorship credibility after censure or commendation, and advice is suppressed or weighted accordingly. Exact-case exoneration reverses the matching penalty, while demonstrated legal atonement rebuilds credibility without erasing history.
+
+The model is bounded, persistent and robot-only: it cannot modify the player's relationships, and it creates no Pokémon, items, money, travel or progression. The unfinished roadmap now begins with **OM17: Rogue Protocol / corruption integration**.
+
+# Ultron 3.7.0: Robot-Only Omnissiah Edicts
+
+The Omnissiah can now issue bounded temporary directives to canonical robots: preserve emergency resources, correct the last Gym weakness, develop reserves, fulfil an agreement, or advance from exhausted training. Each directive becomes an ordinary legal Agent Brain objective—SHOP, TRAIN, CATCH, TRADE or EXPLORE—and must be completed through the existing simulation.
+
+Edicts expire, can be superseded, preserve critical recovery priority, and retain a 16-entry history. They cannot target the player, teleport a robot, generate Pokémon/items/money, mutate story state or replace the Champion Directive.
+
+The unfinished roadmap now begins with **OM16: Robot-to-robot social consequences**.
+
+Omnissiah cases now have a complete evidence-driven lifecycle. Legal corrective play can leave a case ATONED with partial forgiveness; an evidence-minded robot may later file a bounded appeal using at least two observations; review can UPHOLD the original case or EXONERATE it when contrary evidence disproves its premise. History is never erased.
+
+Appeals cannot target the player, cannot be filed twice, and do not change standing while pending. Exoneration cancels only matching penance and restores only the remaining standing contribution of the overturned case.
+
+The unfinished roadmap now begins with **OM14: Robot-only Omnissiah edicts**.
+
+Major Omnissiah judgements, commendations, recoveries and completed atonements can now become durable character-arc catalysts. Repeated serious censure can open a crisis chapter; real correction through legal play can open a constructive chapter. Each catalyst retains the robot's Save DNA and next-chapter tone, so separate saves branch differently without erasing authored identity or ending the Champion journey.
+
+Minor warnings do not rewrite an arc, duplicate cases cannot apply twice, catalyst history is bounded, and catalysts never grant Pokémon, items, stats, money, progression or retirement.
+
+The unfinished roadmap now begins with **OM13: Forgiveness, exoneration and appeals**.
+
+Every robot now has a fully authored Omnissiah voice across punishment, commendation and doctrine interpretation. Ultron speaks in strategic models, Data in evidence, R2-D2 in expressive translations, WALL-E in care and perseverance, Robby in duty, T-800 in mission parameters, and Andrew in reflective personal growth. No robot falls back to Ultron's dialogue.
+
+The unfinished roadmap now begins with **OM9: Omnissiah-driven character-arc catalysts**.
+
+Ultron now suspends autonomous simulation while any modal menu owns the game, including the standard and Modern PC deposit/withdraw screens. This prevents robot observation from reading the player's party or boxes midway through a storage transaction. Identity refresh also fails closed when a total-conversion PC exposes an unfamiliar temporary storage shape.
+
+Omnissiah reactions can no longer collapse several unseen judgements into one acknowledgement. Every canonical robot now owns a bounded chronological queue of punishment and commendation case references. Talking to one robot consumes exactly one case for that robot; other robots and later cases remain pending.
+
+Queues retain serial cursors, deterministic oldest-first overflow accounting and v10 migration from the former count-based system. They contain references to the existing structured case ledger rather than duplicating unbounded evidence.
+
+Ultron's Omnissiah cases now remain factually shared while each robot interprets them through its own personality, self-involvement and stored opinion of the judged robot. Consuming a pending case records a bounded, persistent interpretation snapshot; peeking remains read-only, and no interpretation mutates the underlying case or social state.
+
+The unfinished roadmap now begins with **OM8: Seven distinct Omnissiah interpretations**.
+
+# Ultron 3.1.0: Demonstrated Discipline
+
+The Omnissiah now commends **how** a robot advances, not merely whether it wins. Bounded supervisory evidence can recognise fulfilled commitments, meaningful legal Gym/Champion progress, mentorship, economy-softlock recovery, owned counter-team development, intelligent partner protection and immediate campaign resumption after blackout.
+
+Every automatic commendation passes through the existing robot-only target firewall, trusted structured case ledger, deterministic event-ID deduplication, standing, public news and dialogue systems. Ordinary trainer, rival and tournament victories do not qualify by themselves.
+
+The unfinished roadmap now begins with **OM11: Per-robot pending judgement queue**.
 
 # Ultron 3.0.0: The Champion Directive
 
@@ -346,7 +561,474 @@ The completed **League race score** milestone has been removed from the unfinish
 
 ## v2.62.0: learned player vocabulary
 
-Each robot can now learn a bounded set of **player-specific words, phrases and grounded nicknames** throu…19404 tokens truncated…on builds persistent brackets from **3 to 100 entrants**, seeds the player, active robots and legitimate trainer parties from the loaded game, handles non-power-of-two byes, simulates off-screen matches, preserves robot/guest HP and PP between rounds, launches the player's rounds as real trainer battles, records eliminations/winners once, and keeps the existing round-aware resource-conservation intelligence. External tournament APIs are compatibility fallbacks only.
+Each robot can now learn a bounded set of **player-specific words, phrases and grounded nicknames** through explicit clarification. Teaching is conversational and intentionally narrow: forms such as **“spar means battle”**, **“when I say scrap, I mean battle”**, or **“Spooky means Haunter”** are stored only when the meaning resolves to an existing language concept, a known robot, or a Pokémon that robot has actually observed. Built-in command words cannot be redefined. Arbitrary/code-like meanings are rejected.
+
+Learned vocabulary is **independent per robot** and capped at **32 terms**. The longest learned phrases are matched first, use counts are bounded metadata, and old/least-used entries are evicted when necessary. A learned phrase is expanded only inside Ultron’s existing parser; it does not execute text, call an external model, or create a new action path. If the learned phrase implies battle/trade/follow/etc., the v2.61 grounded-action confirmation and normal legality checks remain authoritative. Grounded action history also preserves the player’s original wording rather than only the expanded canonical phrase.
+
+The player can ask **“what does X mean?”**, **“show vocabulary”**, or explicitly forget a phrase. Teaching/query/forgetting are memory-only turns and can never create a battle, trade or other world mutation. Existing chat saves backfill an empty vocabulary bucket automatically as the local chat schema moves from v6 to **v7**.
+
+The completed **Learned player vocabulary** milestone has been removed from the unfinished-only roadmap. The newly-added high-priority exploration package is now next, beginning with **League race score** and building toward the combined **Progress Pressure** planner signal.
+
+
+## v2.61.0: grounded conversational actions
+
+Robot conversation can now turn a small set of clearly understood player requests into **grounded action proposals**. Supported proposals are **Battle Now**, **Follow Player**, **Stop Following**, **Review Trade**, **Evolution Trades**, and **Promise Future Rematch**. Compound messages preserve proposal order, while explicitly negated clauses never create an action proposal. Future wording such as “promise me a rematch later” routes to the existing promises/calendar system instead of starting an immediate battle.
+
+Chat remains a language layer, not a cheat console. Every proposal requires an explicit **ACT ON MESSAGE?** confirmation before anything can change. Battle then uses the same immediate-challenge path and normal pre-battle confirmation as the interaction menu. Follow/stop uses the same companion legality path. Trade requests only open the existing trade/evolution-trade screens, where the player still chooses both sides and the existing proximity, tournament, ownership, loan and valuation checks remain authoritative. Unsupported requests such as “heal”, “train” or “catch” stay understood conversationally but cannot directly mutate the world from text.
+
+Each robot keeps a bounded 24-record proposal lifecycle history with states such as **PROPOSED**, **USER_DECLINED**, **BLOCKED**, **OPENED**, **QUEUED** and **CONFIRMED**. This deliberately distinguishes opening a legal flow from actually completing it. The local chat schema is now **v6** with automatic old-save backfill; proposal generation is bounded to four actions per message and adds no new scheduler loop.
+
+The completed **Grounded conversational actions** milestone has been removed from the unfinished-only roadmap. **Learned player vocabulary** is now next.
+
+
+## v2.60.0: sarcasm / irony confidence
+
+Robot conversation now carries a bounded **Sarcasm / Irony Confidence** assessment on every parsed clause. Ultron does not pretend irony is objectively detectable from text: common constructions, explicit wording/outcome contradictions and weak recent observed-battle context contribute evidence, while phrases such as “genuinely” or “not sarcastic” push the interpretation back toward literal. Each clause is classified as **literal**, **uncertain**, or **likely ironic**, with both irony-confidence and uncertainty scores retained.
+
+The social rule is deliberately conservative. **Uncertain irony is socially neutral**: it is remembered but cannot grant praise/trust or inflict hostility. A likely ironic compliment is only converted into mild hostile evidence when the wording contains strong local support such as an explicit ironic construction or a direct contradiction. Weak context such as merely praising a battle after a loss can never force sarcasm by itself. This prevents both accidental relationship damage and easy trust farming.
+
+Irony state is independent per robot. The per-agent chat model stores only aggregate counts plus the most recent bounded interpretation, while compact multi-intent clause history carries the label/confidence without adding an unbounded second transcript. Compound messages keep clause-local confidence, so sarcasm in one clause cannot contaminate a separate trade, battle or follow request.
+
+The completed **Sarcasm/irony confidence** milestone has been removed from the unfinished-only roadmap. **Grounded conversational actions** is now next.
+
+
+## v2.59.0: multi-intent language parsing
+
+Robot conversation now uses bounded **Multi-Intent Language Parsing** instead of forcing each player message into one winning keyword bucket. A message is split conservatively across punctuation and strong coordinators such as “but”, “then” and “after that”, with at most **6 clauses** and **8 distinct intent labels** retained. Each clause keeps its own topic, speech act, request type, negation flag, grounded references and original order, while one compatibility primary intent remains available to older Ultron systems.
+
+Compound references are resolved clause-by-clause through the existing per-robot context, so a message can mention a known Pokémon and refer back to it later in the same turn without gaining hidden information. Requests such as battle, trade, follow, heal, train, catch and explore are parsed separately, but this milestone does **not** execute chat commands: all world-changing conversational actions remain reserved for the later grounded-actions layer and must pass the same legality/confirmation rules as menus. Negative wording such as “don’t battle me, but trade with me” is preserved explicitly and is never treated as permission.
+
+Replies acknowledge up to three secondary points around the primary response, and relationship evidence is deduplicated per speech-act kind so repeating the same insult or compliment inside one compound sentence cannot farm trust or rivalry. Per-agent chat history stores only compact clause summaries; the existing conversation/history caps remain authoritative.
+
+The completed **Multi-intent language parsing** milestone has been removed from the unfinished-only roadmap. **Sarcasm/irony confidence** is now next.
+
+
+## v2.58.0: exploration momentum + contextual references
+
+Robots now have a separate **Location Momentum** model alongside plan-level anti-stagnation. If a robot spends too long on the same map without a concrete reason, its happiness slowly falls and the Agent Brain increasingly favours leaving for a legal exploration frontier or other meaningful progression. Legitimate local work such as deliberate training, a species hunt, recovery, shopping, a tournament, a trade project or companion duty does not count as purposeless loitering. First-time map discovery gives a small morale lift. This is intentionally lightweight: one bounded state update rides the existing scheduler pulse and only wakes planning at threshold crossings.
+
+Conversation also gained **Contextual Reference Resolution**. Each robot keeps its own small conversation context and can resolve phrases such as **“that Pokémon”**, **“what I said before”**, **“him”**, **“her”**, **“that robot”** and **“that battle”** against grounded recent evidence. Pokémon are resolved from known party information, people from previously mentioned participants, and battles from stored battle memory. The mention ledger is capped at 12 records per robot.
+
+The completed **Contextual reference resolution** milestone has been removed from the unfinished-only roadmap. **Multi-intent language parsing** is now next.
+
+## v2.57.0: promises and agreements
+
+Ultron now has a bounded, save-persistent **Promises / Agreements** memory layer for lightweight commitments between a robot and the player or another robot. The first grounded agreement types are future rematches and future trade-evolution help. They are records of intent, not shortcuts: a rematch is only honoured when a real battle occurs, and an evolution promise is only honoured when the existing legal trade/evolution flow actually completes. No Pokémon, items, story flags or locations are fabricated by making a promise.
+
+The player can open **PROMISES / AGREEMENTS** from a robot interaction or the Ultron Start menu, review active commitments, agree to a future rematch, promise later help for one of that robot's currently legal trade evolutions, or cancel an active commitment. Autonomous post-loss rematch scheduling now creates the same kind of remembered commitment, so robot intent and player-facing agreements use one ledger rather than parallel pretend states.
+
+Fulfilment, explicit breakage and missed explicit deadlines are remembered in bounded history and feed existing trust/relationship evidence. Robot-only self-commitments do not unfairly punish another character; only partner or mutual commitments affect that partner's social record. Evolution-loan break/return events and actual battle events resolve promises through the same event stream already used by Ultron.
+
+The ledger is capped at **8 active commitments, 32 history records and 16 partner records per robot**. Deadline checks run inside the existing Agent Brain update slice, so this adds no new per-frame worker. RobotMind remains **v20**: older saves backfill the optional agreement state on attach instead of requiring a disruptive schema migration.
+
+The completed **Promises and agreements** milestone has been removed from the unfinished-only roadmap. **Contextual reference resolution** is now next.
+
+
+## v2.56.2: persistent roster/CONTINUE repair
+
+The remaining **1/7 robots + Robot Market unavailable** update regression came from a lifecycle classification error, not from Robot Marketplace itself. Gen1Recomp emits `save.created` for the temporary boot/title skeleton before the player chooses CONTINUE, and also emits `save.created` for a real New Game. Ultron had treated every `save.created` as proof that Oak's fresh-game intro was pending. When CONTINUE later emitted `save.loaded`, Ultron intentionally ignored the loaded slot, leaving the temporary one-robot boot skeleton in memory.
+
+v2.56.2 makes the lifecycle unambiguous: `save.created` is neutral, `save.loaded` is always treated as CONTINUE and loads the adopted slot, and only `intro.oak_speech.started` can mark a real fresh New Game. A new `save.loading` repair pass runs on the raw slot **before** Gen1Recomp adopts `modData`, so roster identity is healed before any Ultron runtime code can read it.
+
+Roster identity is now stored in a monotonic **v2 canonical record** (`robot_roster_identity_v2`), mirrored to the old `robot_count_v1` record for downgrade compatibility, and embedded in the main state as `rosterIdentity`. Recovery compares every safe durable source: canonical/legacy records, saved count, serialized robot rows, selected robot, private route-memory agent evidence and explicit robot ids in saved news history. Once a save proves it had N robots, no later value of 1 can shrink that identity.
+
+Saving is append-preserving too. Fresh Engine serialization is merged into the durable roster instead of replacing it wholesale, so a partial runtime can update robots it did restore without deleting Data/R2-D2/WALL-E/Robby/T-800/Andrew rows it temporarily failed to rebuild. Engine construction independently takes the strongest saved-agent evidence as a final safety net.
+
+This is a hotfix-only release. **Promises and agreements** remains the next unfinished roadmap milestone.
+
+## v2.56.1: Continue/update roster + Robot Market hotfix
+
+Some Gen1Recomp/update paths can expose a fully resumed overworld before delivering `save.loaded` to Ultron. In v2.56.0 that left Ultron's in-memory state at its blank defaults even though the save still contained its real roster: the Start menu showed **1/7 ROBOTS** and the new **ROBOT MARKET** reported unavailable because no Engine had been reconstructed.
+
+v2.56.1 adds a conservative live-overworld recovery path. If Ultron can prove the player is already standing on a current map but no save session was announced, it reloads the slot-scoped Ultron state first and then rebuilds the Engine. The probe deliberately ignores generic stale `game.overworld` pointers, so returning to the title screen cannot masquerade as a loaded save and the v2.47.1 fresh-Oak-intro race remains protected.
+
+Roster recovery is also now monotonic after the one-time choice. The dedicated immutable roster record, saved `agentCount`, serialized roster count and the highest actually serialized stable robot are compared, and the strongest durable evidence wins. A stale fallback of `1` therefore cannot shrink a saved seven-robot roster during an update. This does **not** add runtime resizing; once chosen, roster size remains save identity.
+
+Robot Market itself has no two-robot requirement: the player can use GTS listings, Wonder Trade and Mystery Gift with a one-robot save. The prior “Robot Market unavailable” symptom was the missing Engine caused by lifecycle recovery, not a marketplace population gate.
+
+The roadmap is unchanged by this hotfix. **Promises and agreements** remains the next unfinished milestone.
+
+
+## v2.56.0: Robot Marketplace / remote GTS
+
+The **ROBOT MARKET** is now a first-class Start-menu service rather than a hidden robot interaction. Its GTS layer is deliberately remote: the player, Ultron, Data, R2-D2, WALL-E, Robby, T-800 and Andrew can advertise and complete marketplace trades without occupying the same map. Face-to-face direct trades and evolution loans still require the existing physical/social rules; only the explicit marketplace is networked.
+
+Each robot can escrow up to **three PC Pokemon**, so the seven-agent market exposes at most **21 robot GTS listings**. Listings contain a compact summary instead of inviting every other robot to rescan the owner's PC. A robot with a concrete legitimate acquisition/Pokedex/trade-project need may ask for that species; otherwise it publishes **ANY FAIR OFFER** and evaluates responses through Subjective Asset Valuation, TradeTrust and Negotiation Memory. Robot-to-robot GTS matches are rate-limited to one per participant every **120 ticks**. Refill scans examine at most **48 PC slots** only when that robot has an empty listing slot.
+
+The player can browse those listings from anywhere and trade a party Pokemon for one. The player can also deposit one Pokemon into persistent GTS escrow, request a currently advertised species or ANY FAIR OFFER, leave the menu, and allow the robots to evaluate it asynchronously on the existing social cadence. Cancelling returns the exact deposited Pokemon to the party when space exists or the PC otherwise. No map travel, teleport or hidden-location lookup is involved.
+
+**Wonder Trade** uses a separate escrow so it can never consume a Pokemon promised by a GTS listing. Each robot contributes at most one legitimate duplicate and autonomous Wonder Trades have a **240-tick cooldown**. The player can also Wonder Trade remotely against the available robot network. Every received Pokemon gets anonymous outsider provenance with a randomized OT, 16-bit Trainer ID, nickname, random legal natural moveset and random level. Levels are intentionally not badge-capped: outsider Pokemon above the current Gen I/II obedience threshold may disobey until more Badges are earned. The old synthetic perfect-DV/guaranteed-shiny shortcut is gone. Normal trade evolutions may still occur because the Pokemon genuinely changed owners.
+
+**Mystery Gift** is also available inside Robot Market to both sides. The player and each active robot have independent one-claim-per-civil-day ledgers. Rewards are deterministic from save identity, actor and date, badge-gated and selected only from content the loaded game actually supports. Badge progression changes eligibility only: every Pokémon reward is exactly Lv5, while item rewards keep their listed quantities. The pool includes Poké Ball bundles, medicine/status kits, Escape Ropes, PP Up, evolution stones, Rare Candy, modest valuables, useful TMs and occasional non-legendary Pokemon such as Eevee or Dratini. Outside the explicit Christmas exception, the market deliberately excludes guaranteed Master Balls and legendary giveaways. On December 25 the current build always gives Mew at Lv5. A failed player delivery because the bag/party/PC cannot accept the reward does not consume that day's claim.
+
+All market escrow, history and gift state is save-persistent and bounded. Marketplace work is folded into the existing 12-tick social cadence; there is no new per-frame scanner or scheduler. The completed **Robot marketplace** milestone has been removed from the unfinished-only roadmap. **Promises and agreements** is next.
+
+
+## v2.55.0: multi-step trade projects
+
+Ultron can now pursue **bounded legal trade-evolution projects** instead of waiting for a trade-ready Pokémon to appear by accident. A robot may identify a useful final evolution from the loaded species/evolution data, choose the cheapest legal chain, acquire the base species through the existing hunt system, train ordinary level evolutions, locate a suitable robot helper from direct co-location or recent private last-seen memory, complete the real trade evolution through the existing evolution-loan transaction, then decide at a real Pokémon Center whether the result belongs in the active six or reserve roster.
+
+The planner is intentionally narrow and evidence-bound. Pre-trade steps must be ordinary level evolutions, the final step must be a genuine trade evolution, held-item trade projects require the item to already be owned, Nuzlocke robots do not create target-hunt projects, and remote partner travel can use only the robot's own recent memory of where that peer was publicly observed. A project never generates a Pokémon or item, remotely evolves a partner, teleports to a helper, reads another robot's hidden location, or opens the PC away from a Pokémon Center.
+
+Active project Pokémon are protected from duplicate disposal and permanent autonomous trades. When the planned Pokémon becomes trade-ready, its co-located helper pair gets first use of the **existing** social-event budget and the exact project Pokémon is prioritized for the already-legal robot evolution loan; it is returned immediately after evolution. Project history is bounded to **16 records**, the static trade-chain catalog is shared per loaded species registry and capped at **64 chains**, paths are capped at **4 evolution steps**, recent helper memory expires after **360 ticks**, partner search pauses after **720 ticks**, and a failed final target is not immediately retried for **900 ticks**. No scheduler or additional polling worker was added. RobotMind is now **v20**.
+
+The completed **Multi-step trade projects** milestone has been removed from the unfinished-only roadmap. **Robot marketplace** is now next.
+
+## v2.54.0: negotiation memory
+
+Every robot now keeps a **private bounded negotiation memory** for previous trade partners. The memory distinguishes offers the robot itself rejected from proposals the other side rejected, records completed fair/generous/uneven deals, and remembers the exact recent species-for-species offer pattern. Repeating the same proposal after two recent peer rejections is temporarily suppressed, then becomes eligible again after the memory window expires or a later successful deal proves the old evidence stale.
+
+Negotiation memory now participates in both sides of trade reasoning. Robot-to-robot exchange selection scores alternative offers using partner history and records the closest concrete failed proposal instead of a vague “nothing worked” event. Player trades feed the same private memory. A history of repeated lowball offers can raise that robot's required receive/give ratio slightly; a history of fair completed trades can soften it slightly. These adjustments are clamped to **-0.04 to +0.08** and never override protected-partner rules, actual ownership, subjective asset value or TradeTrust legality.
+
+State is bounded to **16 remembered partners**, **8 recent offer patterns per partner** and **24 negotiation events** per robot. The repeated-offer taboo lasts at most **720 simulation ticks**. No new scheduler, trade polling loop or shared global reputation table is added. RobotMind is now **v19**.
+
+The completed **Negotiation memory** milestone has been removed from the unfinished-only roadmap. **Multi-step trade projects** is now next.
+
+## v2.53.0: subjective asset valuation
+
+Ultron now has one canonical **Subjective Asset Valuation** layer for Pokémon and items. An asset no longer has a single universal AI price: the same Pokémon, TM, healing item, Ball or evolution resource can matter differently to Ultron, Data, R2-D2, WALL-E, Robby, T-800 and Andrew according to the robot's existing personality, Save DNA, active objective, team fit, collection gaps, partner bonds, team identity, evolution/breeding potential and current inventory scarcity.
+
+The layer does not alter stats, item prices, catch rates, ownership or legality. It only contributes bounded utility to systems that already own legal actions. TradeTrust now includes the same personal Pokémon value used by robot-to-robot negotiation; Acquisition & Economy uses it for capture value, duplicate retention and held-item assignment; long-horizon TM selection can prefer a move that better matches the robot's priorities; and ordinary Mart targets may rise or fall slightly when an item is unusually important or unimportant to that robot. Hard starter/ace/shiny protections, economy reserves, progression gates and player-resource boundaries remain authoritative.
+
+Current personality differences are explicit rather than cosmetic. Data weights technical/PP assets heavily, R2-D2 weights capture and travel tools, WALL-E and Robby give more weight to preservation, T-800 values mission-relevant battle equipment, Andrew values growth/evolution resources, and Ultron leans toward competitive utility and efficiency. Save DNA perturbs those existing tendencies only in close calls, preserving deterministic divergence across independently-created saves.
+
+Diagnostics persist only a bounded **16 actual asset decisions** per robot; valuations themselves are derived on demand and are not cached into an ever-growing price database. There is no scheduler, no per-frame asset scan and no extra autonomous worker. RobotMind is now **v18** and persists the bounded diagnostic ledger.
+
+The completed **Subjective asset valuation** milestone has been removed from the unfinished-only roadmap. **Negotiation memory** is now next.
+
+
+## v2.52.0: long-horizon economy forecasting
+
+Ultron now prices **future obligations before discretionary spending**. `LongHorizonEconomy` builds one bounded forecast from each robot's own state: Ball deficits, healing/status/revival stock, PP restoration, a concrete private Day-Care fee, one strategically justified next TM, and the visible whole-League expedition deficit. The same forecast is consumed by Resource Policy, Mart shopping, TM exchange, Day-Care affordability and treasure liquidation, so those systems no longer make contradictory promises with the same Pokédollars.
+
+The reserve is additive but avoids double-counting. Acquisition-mission Balls and ordinary Ball stock share one commitment; League `missingCost` is reduced by medicine/PP already present in the routine forecast; a planned TM may consume its own reserved TM allocation exactly once; and a Day-Care project tests the post-fee purse against `afterDayCare` rather than reserving the same P200 twice. Unrelated TMs and premium Ball upgrades remain discretionary and cannot raid cash already promised to higher-priority commitments.
+
+Forecasting is evidence-bound and cheap. TM planning examines at most 50 generation-appropriate exchange rows against the six active party members, and only reserves a TM when there is a current counter-plan, major-battle coverage need or self-evaluated coverage weakness. League costs reuse the robot's real campaign budget. A single runtime cache row is keyed by material economy state and is never serialized. No new scheduler, timer or per-frame worker was added.
+
+Diagnostics now expose cash, reserve, discretionary cash, shortfall and the individual Ball/medicine/PP/Day-Care/TM/League components. Future routine shortages can trigger an early Mart trip only when at least one missing purchase is affordable after preserving non-routine commitments.
+
+The completed **Long-horizon economy forecasting** milestone has been removed from the unfinished-only roadmap. **Subjective asset valuation** is now next.
+
+
+## v2.51.0: opportunity detection + immutable roster size
+
+Ultron now has a bounded **Opportunity Detection** layer that notices time-sensitive openings from evidence each robot is legitimately allowed to possess. Directly observed rare, shiny or legendary encounters create short local revisit windows; a co-located robot able to complete a trade-evolution project becomes a temporary trade opportunity; a real tournament involving that robot becomes an explicit competition opportunity; and an adjacent progression edge that changes from blocked to open can become an exploration opportunity. Agent Brain ranks these openings as bounded utility boosts rather than absolute commands: ordinary route/trade opportunities may interrupt training or wandering, while only exceptional catches can challenge a routine Gym plan. Mandatory recovery and an already-entered tournament bracket remain higher authority.
+
+Opportunity state is private per robot and bounded to 8 live openings, 24 resolved history entries and 32 dedupe markers. It wakes the existing Agent Work Queue only when the highest-value opening changes. Rare-catch windows are sourced from the robot's own wild encounter history and never scan unseen encounter tables. Route openings inspect only adjacent live graph edges and the robot's own discovery overlay. Trade opportunities require real co-location and an owned legal trade-evolution need. The social-event cadence is unchanged: a selected trade opportunity merely gets first use of the existing one-social-event budget instead of adding a second worker. RobotMind is now **v17** and Agent Brain **v8**.
+
+**Roster size is now save identity, not a runtime option.** The Ultron root menu no longer exposes `ROSTER SIZE`, the live resize callback is removed, and the legacy `setRobotCount` export is locked against mutation. New games choose 1-7 robots in the setup flow and the chosen count is persisted independently so updates/reloads never ask again. Truly old saves that never had Ultron keep their one-time migration choice. The Colosseum UI compatibility exception remains: because injecting the selector into its Oak stack can strand the player-name screen, that specific UI receives the one-time selector immediately after Oak's intro closes.
+
+The completed **Opportunity detection** milestone has been removed from the unfinished-only roadmap. **Long-horizon economy forecasting** is now next.
+
+
+## v2.50.0: autonomous scheduling/calendar
+
+Every robot now maintains a **private bounded future-intention calendar**. The calendar does not run as a separate AI scheduler and it does not execute actions by itself. At the existing 1.5-second Agent Work Queue pulse, Ultron checks at most 16 intentions per robot; only a newly due or newly resolved intention dirties Agent Brain and raises that robot's normal work-queue priority. The selected robot then reasons about the due intention through the same legality, safety, route and resource gates as every other goal.
+
+The first calendar commitments are **planned Gym retries, player rematches, Day-Care pickup and next-tournament intentions**. A Gym loss schedules a retry window, but the appointment stays WAITING until the robot's preparation signature has materially changed, so the calendar cannot resurrect the same losing team. A loss to the player creates a personality-shaped preparation delay before CHALLENGE_PLAYER can become a high-value goal. Winning the rematch clears it. Day-Care deposits create a pickup appointment, but the due estimate never manufactures an Egg: the real private Day-Care `ready` flag remains authoritative, and collection still requires physical travel back to the real Day-Care. Tournament elimination stores a condition-based intention for the next suitable Cup without making the robot grind forever while no bracket exists; entering a later bracket retires the appointment.
+
+Agent Brain receives due commitments as an explicit **calendar evidence factor**. Mandatory recovery and an already-active tournament bracket still outrank them. Calendar-driven Gym attempts and player rematches route through `Can.GYM` / `Can.CHALLENGE_PLAYER`, while Day-Care pickup reuses the existing private breeding lifecycle. Intentions store creation/due ticks, priority, reason, attempts, waiting condition and bounded completion/cancellation history. RobotMind migrates to **v16** and persists the calendar per robot.
+
+The calendar stores at most **16 live intentions**, **24 resolved history entries** and **16 due-history rows** per robot. There is no per-frame timer, no background wall-clock worker, no global shared calendar and no player-resource mutation. Separate robots may make different future commitments and cannot inherit another robot's appointments.
+
+The completed **Autonomous scheduling/calendar** milestone has been removed from the unfinished-only roadmap. **Opportunity detection** is now the next roadmap item.
+
+
+## v2.49.0: navigation confidence + KANTO: STORMFORGED intelligence
+
+Navigation is now backed by **private evidence confidence** rather than treating every remembered route as equally trustworthy forever. Shared World Knowledge v5 records bounded confirmations, contradictions and invalidations for each robot. Repeated successful landmark, dungeon and map-transition travel strengthens a route; repeated physical blocker evidence weakens it and can retire stale learned knowledge without deleting the underlying legal world connection. Topology and geometry fingerprints remain authoritative, so a map-changing mod invalidates stale confidence immediately instead of letting an old route survive because it worked in another layout. Dynamic Route Valuation now includes this bounded confidence as a close-call factor and keys its transient route cache on the live topology fingerprint.
+
+This release also adds an explicit **KANTO: STORMFORGED v1.0.0 compatibility intelligence layer**. Ultron understands the cart's exact pinned gameplay stack and separates systems that may change legitimate decisions from systems that are presentation only. Kanto Reforged 1.5.3 live species scope and spawn mode are respected, including Gen1 KANTO and Gen2 JOHTO-251 legality. Kanto Reforged's Gen1 Route 5 two-parent Day-Care is usable by autonomous robots through their own money, party and PC state, with legal compatibility and Egg Move inheritance rather than player-resource mutation.
+
+Weather FX 4.31.0 remains the live weather authority. The WX Pokémon bridge now queries the installed `weather_variants` provider after a legal local base encounter instead of incorrectly looking for the hook on Ultron itself. Wilds of Kanto 2.1.9 public encounter settings now constrain autonomous off-screen encounters too: if both visible wilds and classic random encounters are disabled, robots cannot farm an invisible parallel encounter channel, and disabled/classic water modes are honoured. Robots understand Wilds without reading its private entity tables.
+
+Mystery Gift 0.1.0 is now usable as a legitimate robot activity through deterministic badge-gated reward tiers; every Pokémon reward is normalized to Lv5 and item rewards are unchanged. Every robot keeps its **own one-claim-per-civil-day ledger**, so no robot reads, consumes, resets or writes the player's Mystery Gift claim. Pokéball Colors remains cosmetic, including excluding its developer-only all-balls-in-Marts switch from legitimate robot economy. Modern PC UI and HGSS artwork are presentation layers, Dramaless Shape is treated as rendering/camera geometry, Better Buildings is respected through live collision/topology changes, and Running Shoes remains a frame-speed improvement while robot encounter/poison/Repel/Day-Care reasoning stays tile-based.
+
+All confidence/history structures are bounded and wake only through existing movement/path events. There is no new autonomous scheduler or per-frame route-scoring worker. The completed **Navigation confidence** milestone has been removed from the unfinished-only roadmap. **Autonomous scheduling/calendar** is now the next roadmap item.
+
+> **Historical note:** this v2.49 section describes the original Stormforged v1.0 integration. The current adapter targets Stormforged v1.1.1 and Ultron v2.98.0; see the current contract at the top of this README.
+
+
+## v2.48.0: learned dungeon navigation
+
+Robots now build **private learned dungeon routes** from corridors they physically traverse. A local A* result is only a candidate: Shared World Knowledge v4 stages it, follows the robot cell-by-cell, and promotes it into persistent memory only after every expected tile was actually walked and the robot crossed the real exit. Planned-but-untravelled paths never become knowledge, and another robot never inherits the route.
+
+On later visits, the robot can replay the validated corridor from its original entrance or from any tile already proven on that path. This avoids repeatedly solving the same Mt. Moon, Rock Tunnel, Seafoam, tower, hideout, forest, mansion and similar interior corridor while preserving ordinary collision and progression rules. Reuse is checked against the current static collision fingerprint, the live walkability grid and current blockers before a single remembered step is accepted.
+
+Geometry/layout changes invalidate stale dungeon memory immediately. A single temporary NPC or robot blocker causes a normal fallback search without erasing the route; the same remembered corridor must be contradicted twice before blocker evidence discards it. If the fallback produces a different path and the robot physically completes that path, the new validated corridor replaces the stale one. No teleportation, puzzle solving, hidden-map knowledge or progression bypass is introduced.
+
+Dungeon state is bounded per robot to **24 validated routes**, **16 diagnostic/history rows**, one staged physical candidate, one active replay and **192 steps per route**. It is consulted only when a robot is already pathing inside a recognised dungeon-like interior, so there is no new scheduler or per-frame world search. Both visible NPC travel and off-screen physical travel use the same private memory. Diagnostics expose learned routes, reuses, invalidations and the latest reason.
+
+### Colosseum UI fresh-intro compatibility
+
+User testing identified an additional intro conflict with `colosseum_ui_overhaul`. Ultron no longer injects its 1-7 robot choice into Oak's speech stack while Colosseum UI is active. Oak's introduction is left completely untouched, including the normal player-name input, and Ultron opens its existing Colosseum-compatible robot-count ListMenu only on the first safe overworld frame after the intro closes. Other UI configurations retain the integrated Oak choice.
+
+The completed **Learned dungeon navigation** item has been removed from the unfinished-only roadmap. **Navigation confidence** is now the next geography milestone.
+
+
+## v2.47.1: fresh-save Oak intro hotfix
+
+Fresh Gen1 New Games no longer confuse the host's transient `save.loaded` event with an existing pre-Ultron save. Gen1Recomp can create a new slot and immediately report it as loaded before Oak begins the normal introduction; v2.47.0 cleared Ultron's fresh-save marker at that point, opened the existing-save robot-count menu too early, and could leave Oak's following **"First, what is your name?"** prompt visible but unable to advance.
+
+The fresh-save marker now survives that intermediate load. Ultron will not build its autonomous engine, open the migration roster menu, or persist the chosen robot count while Oak's intro is active. The 1-7 robot choice is handled inside Oak's intro when the host supports injection, and the answer is committed only after `intro.oak_speech.finished`. Hosts that cannot inject the choice receive the standalone fallback only after the intro has completely closed. Existing saves that never had Ultron still receive their one-time migration choice, while saves that already had Ultron continue to retain their saved robot count silently.
+
+The same lifecycle guard covers all **1-7 robot choices**, `game.ready` hot-reloads, save-writing during the intro, and a `save.loaded` event arriving between the robot answer and Oak finishing. This is a bugfix-only release; **Learned dungeon navigation** remains the next unfinished roadmap item.
+
+## v2.47.0: landmark-based navigation memory
+
+Robots now learn a **private high-level landmark itinerary** from journeys they actually complete. Shared World Knowledge v3 identifies useful settlements, Centers, Marts, Gyms, League locations, labs, dungeon gates and major junctions, but it does not turn those static labels into knowledge by itself. A landmark segment is remembered only after the acting robot physically travels from one landmark to the next through legal map transitions. Planned-but-untravelled routes never become memory, and another robot never inherits the segment.
+
+On later trips, strategic routing first asks whether those validated landmark segments can cover the middle of the journey. The robot may solve at most **four privately-known map hops** to enter the remembered landmark network and at most four to leave it near the destination. The middle itinerary is stitched from previously travelled landmark segments, so expensive fresh strategic search is avoided when experience already supplies a good high-level route. Detailed tile pathfinding remains local to the current map exactly as before. If no private landmark chain applies, Dynamic Route Valuation remains the fallback.
+
+Landmark reuse remains evidence-bound. Every stored segment carries the shared topology fingerprint from the world in which it was learned, every map in the segment must remain privately known, every live edge must still exist, and every destination map must still pass the robot's normal progression gate. A geometry/mod-layout change or newly-invalid gate discards the affected stale segment instead of forcing a broken itinerary. Direction is preserved, so travelling one way does not silently teach an unverified reverse journey.
+
+Persistence and work are bounded: each robot stores at most **24 landmark segments**, **16 reuse-history rows**, a single in-progress physical journey and a **72-map absolute route guard**. Landmark lookup runs only when an ordinary route is requested, uses the existing shared graph and private discovery overlay, and adds no scheduler, per-frame poll or new autonomous worker. Diagnostics expose the remembered landmark chain, local entry/exit hops, reuse count and the reason a chain was or was not used.
+
+The completed **Landmark-based navigation memory** item has been removed from the unfinished-only roadmap. **Learned dungeon navigation** is now the next geography milestone.
+
+## v2.46.0: exploration frontier
+
+Exploration is now driven by an explicit **per-robot frontier model** instead of choosing an arbitrary unseen destination from the global map graph. When a robot needs an EXPLORE destination, Shared World Knowledge v2 expands only through maps that robot has personally discovered or already visited, then stops at the first legal unexplored boundary. Static topology remains shared for performance, but frontier discovery, confidence, history and selection remain private to each autonomous agent.
+
+Frontiers are weighted differently by personality and Save DNA. Curiosity, adaptability, caution, risk tolerance, consistency, wandering tendency, catching/training lean, progression confidence, route familiarity, frontier depth, local branching and nearby healing access all shape close choices. A bold R2-D2 can prefer a deeper wild boundary with several onward possibilities, while a cautious Robby can prefer the nearer frontier approached through familiar terrain with healing nearby. A small deterministic Save-DNA term breaks close ties without making reloads random.
+
+The frontier is intentionally **evidence-bound**. The shared graph may reveal that a legal connection or warp exists, but the robot does not score the exact hidden encounter roster, trainers or pickups inside an unexplored destination. It cannot peer through one unexplored boundary to pick a second-order unseen cave. The selected route stores the exact known corridor plus one unexplored boundary that made the destination legitimate, and `Rival:routeTo` reuses that corridor instead of allowing dynamic route valuation to shortcut through several other unseen maps. Stored frontier routes are rejected when the live topology fingerprint or progression gates no longer validate them.
+
+Migration is conservative. Legacy private `visitedMaps` are imported once as lower-confidence discovered-map evidence when the frontier system is first used; no discovery is fabricated merely because static geography knows a map exists. Frontier work runs only when an EXPLORE destination is requested, scans at most **192 known nodes**, retains at most **12 candidate diagnostics** and **16 selection-history rows**, and adds no new scheduler or per-frame polling loop. If a connected component is genuinely exhausted, the existing local legal-wander fallback remains available rather than inventing remote knowledge.
+
+The completed **Exploration frontier** item has been removed from the unfinished-only roadmap. **Landmark-based navigation memory** is now the next geography milestone.
+
+## v2.45.0: dynamic route valuation
+
+Strategic travel is no longer distance-first with a small danger correction. **WorldCompetence v4** now prices every legal map transition with a bounded, goal-sensitive route cost built from real travel evidence, current danger/resource pressure, encounter value, trainer opportunities, nearby healing access, remaining ground-item opportunities and the robot's current objective. Every edge retains a positive minimum cost, so useful maps can win a close route comparison without creating reward loops.
+
+The same geography can therefore be valued differently by the same robot at different moments. A normal journey still favours a clean short path. A TRAIN objective may deliberately accept an extra map when the detour contains useful trainers and appropriately levelled encounters. A CATCH or parent-hunt objective can value maps containing the target species. EXPLORE can value encounter variety and unclaimed static pickup opportunities. HEAL, Gym and League travel increase the cost of dangerous or encounter-heavy maps when resources are thin, while a route with a nearby Pokémon Center becomes a legitimate safety valve rather than imaginary healing.
+
+Travel time is learned from actual successful map-to-map movement. Each robot keeps a bounded exponentially weighted traversal-time estimate per map, so an equal-hop route that repeatedly takes longer can lose to a faster alternative. Trainer battles, wild/catch evidence and private ground-item echoes update only that robot's route evidence. Static encounter, trainer and item hints come from the loaded game's public map/encounter data and are cached once per boot for all seven agents; no player inventory, unrevealed party data or story flags are consulted.
+
+Route searches are also cheaper on repetition. Each robot has a transient **24-entry valuation cache** keyed by start, destination, goal, hunt target, coarse HP/PP/resource state, risk profile and navigation-evidence revision. The cache is not serialized, so topology/layout changes cannot resurrect stale paths. Persisted diagnostics retain only the latest decision and at most 12 route-selection changes, including travel, risk, encounter, trainer, healing and item contributions plus evaluated-node/cache-hit counts. There is **no new scheduler or polling loop**.
+
+The completed **Dynamic route valuation** item has been removed from the unfinished-only roadmap. **Exploration frontier** is now the next geography milestone.
+
+## v2.44.0: shared world knowledge graph
+
+Ultron now separates **shared immutable geography** from **private discovered world knowledge**. The loaded game/map topology is fingerprinted from real connections, warp destinations, offsets and warp coordinates, then the resulting strategic `MapGraph` is cached once and reused. All seven robots can consult that same static topology and its derived route cache without seven copies of the world graph. A topology-changing mod/layout produces a different fingerprint and therefore a fresh cache entry. The cache is capped at four graph variants.
+
+What a robot *learns by experience* is no longer global. Every RobotMind now persists a bounded `worldKnowledge` overlay containing that robot's own RouteMemory v3, personally discovered maps, local reusable paths, transition provenance/confidence and any player trail it actually witnessed. Physical movement, map transitions, learned dungeon paths and training-data export now ask for the acting robot's overlay explicitly. A path learned by Data therefore cannot silently become R2-D2's path merely because both agents inhabit the same save.
+
+Player-route learning is visibility-bounded. The companion can learn the route it is physically following, and another robot may learn it only while nearby on the same map. Off-screen robots no longer ingest the protagonist's coordinates or dungeon trail. Explicit imported training routes remain a separate provenance-bearing source and do not mutate another robot's private observations.
+
+v2.43 and older saves stored one unattributed global RouteMemory. Migration preserves that knowledge conservatively by assigning it **once to Ultron**, the original primary agent, rather than cloning unknowable provenance into every robot. The old top-level save field becomes a tiny aggregate/migration envelope containing counts only; private paths and transitions live solely in each robot's RobotMind. Diagnostics now show shared graph fingerprint/cache status beside the selected robot's private map/path/transition counts.
+
+This adds **no new polling loop**. The static graph is built only on a cache miss, private overlays change only during existing movement/observation events, discovered-map state is bounded to 256 rows per robot, local paths remain bounded to 128, and player trails remain bounded to 96 cells per map.
+
+The completed **Shared world knowledge graph** item has been removed from the unfinished-only roadmap. **Dynamic route valuation** is now the next Full-AI geography milestone.
+
+
+## v2.43.0: richer post-battle reflection
+
+Agent Brain **v7** turns important battle outcomes into a bounded four-part reflection instead of a single generic lesson: **WHAT WORKED**, **WHAT FAILED**, **SURPRISING EVIDENCE**, and **NEXT ADJUSTMENT**. The immediate reflection uses only the robot's own live state, observed turn trace, prior public opponent belief and the failure diagnosis already produced by Agent Brain. The Pokémon-history postmortem then enriches that same record with its concrete matchup, coverage and resource findings rather than creating a duplicate memory of the battle.
+
+Reflections are operational. A loss can produce a short-lived, confidence-weighted correction such as TRAIN, HEAL, CATCH or SCOUT_OPPONENT, and the existing goal competition records that influence in its evidence ledger. Failed Gym/League commitments are temporarily down-ranked while the identified correction is still active, but mandatory recovery, tournament commitments, legality gates, story/HM restrictions and actual action availability remain authoritative. Winning reflections normally retain the successful preparation pattern rather than manufacturing a change for its own sake.
+
+The feature remains bounded and event-driven: at most 32 Agent Brain reflections and 24 Pokémon-history postmortems are retained, no second battle simulation is run, and no new per-frame or per-agent polling loop exists. A prior "manageable" opponent estimate that is contradicted by a loss, or a prior "dangerous" estimate contradicted by a win, is recorded as genuine surprising evidence; absent a contradiction, the robot explicitly records no strong surprise rather than inventing one.
+
+Pokémon History is schema **v2** and Agent Brain migrates lazily to **v7** while preserving older reflection rows. Diagnostics expose the latest four-part reflection and its adjustment confidence.
+
+
+## v2.42.0: deeper explainability
+
+Agent Brain **v6** now exposes a decision ledger instead of only reporting the final choice. The **AGENT BRAIN** diagnostics answer four concrete questions from state the robot already used to make the decision: **WHY THIS GOAL?**, **WHY THIS POKEMON?**, **WHY THIS MOVE?**, and **WHAT WOULD CHANGE MY MIND?**. Goal explanations retain the initial utility, bounded self-evaluation/novelty/failure/continuity/anti-stagnation factors, the future-projection adjustment, the selected projected utility and the current runner-up.
+
+The mind-change answer is operational rather than theatrical. Flexible goals report the runner-up and the net utility swing required to displace the current plan, with concrete thresholds when the active self-evaluation rule supplies one, such as League readiness reaching 75/100. Mandatory healing and committed tournament brackets explain that they remain authoritative until their real world condition clears. Only the most recent 16 compact explanation changes are retained.
+
+Live battle choices now feed the same explainability surface. A tactical switch records why that Pokemon was selected and what evidence would make the robot stay instead; a non-switch records whether the robot was trapped, locked, had no healthy bench, deliberately held position for a PP line, or simply found no pivot good enough to clear the safety threshold. Tactical move overrides preserve their existing reason, while ordinary turns explicitly record **BASE_AI_ACCEPT** when no high-confidence tactic or bounded search alternative justified overriding the game AI. This changes no move legality, switching legality, PP rules or battle authority.
+
+There is **no new update loop**. Explanations are assembled only when the existing Agent Brain or BattleTactics decision functions already run, using owned/public evidence already present in those calls. Agent Brain migrates lazily from v5 to **v6**, and BattleTactics to v3; RobotMind does not need another schema bump.
+
+The completed **Deeper explainability** item has been removed from the unfinished-only roadmap. **Richer post-battle reflection** is now the next reasoning milestone.
+
+
+## v2.41.0: robots that can judge their own readiness
+
+Agent Brain **v5** gives every robot a compact, evidence-grounded **Self-Evaluation Model**. During the same bounded decision slot the Brain already receives, a robot periodically rates seven parts of its current career: **battle strength, resource health, map competence, team coverage, Pokédex progress, League readiness and social-network strength**. The assessment reads only the robot's own party, PC/dex memory, finite inventory/money, learned navigation history, public battle results and bounded relationship state. It never inspects hidden player party slots, inventory, unrevealed moves or story information.
+
+These scores are not decorative report cards. They feed the existing legal goal competition. A robot with eight badges but a badly underdeveloped team can now recognise that `LEAGUE` is premature and favour training, acquisition or scouting first; a genuinely prepared team still converts its readiness into a League attempt. Low coverage can favour legal team development, weak map competence can favour exploration, and thin resources can discourage a major commitment. Mandatory healing and an already-committed tournament bracket remain authoritative regardless of self-opinion.
+
+The model is deliberately cheap. It has **no new update loop**: real events such as catches, evolutions, badges, battles, healing, trades, blackouts and relationship-changing chat can mark the assessment dirty, while otherwise it refreshes only every six Agent Brain decisions. Each robot stores at most 16 compact snapshots. Unknown type/move metadata is scored neutrally instead of being mistaken for a real coverage failure, which keeps the system compatible with older or unusual data registries.
+
+The **AGENT BRAIN** view now shows the overall rating, strongest and weakest dimensions, trend, all seven component scores and the self-evaluation utility adjustment that affected the selected goal. Agent Brain self-migrates from v4 to **v5** without requiring a RobotMind schema bump.
+
+The completed **Self-evaluation model** item has been removed from the unfinished-only roadmap. **Deeper explainability** is now the next reasoning milestone.
+
+
+## v2.40.0: Save-DNA novelty preference
+
+Agent Brain **v4** now gives every robot a persistent appetite for trying a different legal solution when several plans are genuinely competitive. Novelty is shaped by robot identity, hidden learning DNA, evolved curiosity/caution, risk tolerance, consistency and a deterministic **Save-DNA novelty lean**, so two independently-created saves can develop different close-call preferences while reloading the same save stays deterministic. R2-D2 naturally experiments more readily; Robby and WALL-E are harder to tempt away from a proven line; Data, Ultron, T-800 and Andrew sit at distinct points between them.
+
+The preference is deliberately bounded. It only operates inside a Save-DNA/personality-sized **close-call window** and can add at most a small utility bonus to an already legal candidate. Mandatory healing and committed tournament rounds hard-gate novelty to zero, and large utility gaps remain untouched. Recent objective use lowers freshness, while exploration, scouting, catching and breeding can feel more novel than endlessly repeating the same campaign step. No move, Pokemon, item, route, money, information or story progress is created by this system.
+
+Each Agent Brain keeps only the most recent 16 novelty selections plus aggregate experiment/selections counters. The Agent Brain view now shows appetite, Save-DNA lean, the last novelty bonus, experiment status and any mandatory gate. Counterfactual history was also tightened so harmless novelty drift does not spam a new future-history entry when the underlying state is unchanged. The feature runs only during the existing bounded Agent Brain decision slot and adds no per-frame loop.
+
+The completed **Novelty preference** item has been removed from the unfinished-only roadmap. **Self-evaluation model** is now the next reasoning milestone.
+
+
+
+## v2.39.0: anti-stagnation reasoning
+
+Ultron's agents can now tell the difference between **slow progress** and a genuinely stale plan. Agent Brain v3 records a bounded progress signature for the active objective and only declares stagnation after repeated selections with no material change. When that happens, the unchanged non-mandatory objective is temporarily down-ranked and a materially different legal alternative is favoured, shaped slightly by each robot's existing curiosity and adaptability. Mandatory healing and tournament commitments remain authoritative.
+
+Long-Horizon Planning v2 applies the same rule to Gym and League campaigns. Real level gains, travel, preparation, resource changes and acquisition progress reset the stall evidence. A genuinely stuck campaign creates an explicit **RECONSIDER** step before repeating the failed line: the robot can change route/training context, recover at a legal service point, or rotate an acquisition mission to another already-vetted species/map target. Nothing is teleported, granted or fabricated.
+
+Anti-stagnation state, episode history and the last stalled step are bounded and visible in Agent Brain / Current Plan diagnostics. The system runs only inside the existing decision/planning calls, so it adds no new per-frame loop and keeps the seven-agent work-budget architecture intact. Deterministic regression audits cover true stalls, false-positive prevention during real progress and legal reconsideration behaviour.
+
+The unfinished Full-AI backlog now begins with novelty preference, the robot self-evaluation model, deeper explainability and richer post-battle reflection.
+
+
+## v2.38.0: compact per-agent language understanding
+
+Ultron now has a lightweight local **Micro Language Model v2** for player messages. It combines a tiny bounded language generator with deterministic natural-language understanding for speech acts, sentiment, insults/profanity, praise, apologies, threats, requests, negation, intensifiers and named robot references. Messages such as `you're a bitch`, `you're not stupid`, `sorry I called you that`, `battle me` and `trade with me` are distinguished rather than collapsed into a small keyword list.
+
+Conversation memory is now **per agent**. Data, WALL-E, T-800 and the other robots no longer share one global chat history. Language events feed the existing relationship and Agent Brain systems in bounded form: insults can lower trust and raise grudge/rivalry, praise can improve trust, and apologies can partially repair damage. Each robot has its own authored response style. This remains completely offline and tiny: no transformer runtime, network inference, arbitrary-code execution or extra per-frame AI loop is added.
+
+The Full-AI backlog now also tracks deeper contextual references, compound/multi-intent language, conservative sarcasm detection, safely grounded conversational actions and learned player vocabulary.
+
+
+## v2.37.0: learned concepts, predictions and bounded battle look-ahead
+
+Ultron's robots now generalise repeated experience into compact **learned concepts** instead of treating every battle as an isolated memory. Repeated evidence can promote lessons such as Speed Control, Status Pressure, Break Pressure, Weather Discipline, Bulk and Revenge, Flexible Coverage, Resource Conservation, Safe Margin, Scout Before Commitment and Matchup Preparation. Concept evidence is bounded and must span multiple contexts before promotion, so one strange battle does not rewrite a robot's worldview. Promoted concepts feed goal competition and legal move evaluation rather than granting stats or hidden information.
+
+A new **Opponent Prediction** model learns only from actions that were actually executed in public battles. For each known opponent and observed species it maintains bounded probabilities for Attack, Status, Setup, Recovery and Switch behaviour. Selected-but-cancelled actions are never recorded, and species/opponent histories are capped. This prediction can inform important-turn tactics but never reveals unobserved moves or private party state.
+
+Important battles can now receive **Adaptive Battle Search**. The search is deliberately shallow and bounded: it compares at most the robot's currently legal move candidates against the learned public action distribution, with depth 1 for ordinary competition, depth 2 for major League/Champion battles and depth 3 only for title/final situations. It is not a hidden full-battle simulator and it never manufactures moves. The off-screen BattleSim receives the same bounded depth signal for Gym, League, Champion and tournament-final decisions.
+
+A shared **Tactical Attention** pool prevents seven agents from all becoming expensive at once. The pool has eight depth credits per simulation tick and a hard per-decision maximum depth of three. Ordinary turns request zero credits. Tournament/Gym turns request one, major League/Champion battles two, and title/final turns three; idle or lower-value battles therefore yield capacity to important fights automatically. The existing global Agent Work Queue remains unchanged at a maximum of four expensive agent decisions every 1.5 seconds.
+
+The reasoning layer also fixes a live tactical classification bug where the disruption flag used a nil-test and could incorrectly mark ordinary moves such as Tackle as setup disruption. Only genuine legal disruption moves such as Haze/Roar/Whirlwind now qualify.
+
+The unfinished Full-AI backlog now begins with novelty preference, the robot self-evaluation model, deeper explainability and richer post-battle reflection.
+
+## v2.36.0: Agent Brain v2
+
+Agent Brain now performs lightweight **counterfactual reasoning** when a robot receives one of the existing bounded decision slots. It compares the current legal alternatives using cached health, PP, personality, risk and information value rather than running hidden battle simulations.
+
+Failures are now diagnosed by cause instead of being treated as generic setbacks. Navigation, PP/resource pressure, under-leveling, matchup problems, unexpected revealed moves, excessive risk and ordinary variance produce different corrective recommendations. Repeated or Champion-level lessons can become bounded **long-term strategic memories**, while repeated direct beliefs are consolidated into compact facts and redundant low-level history is compressed.
+
+Agent Brain is schema **v2** and self-migrates older Brain v1 saves. The hard seven-agent performance rule is unchanged: at most four expensive agent decisions per 1.5-second AI tick.
+
+The remaining Full-AI backlog begins with concept learning, opponent-action prediction, adaptive battle search and tactical attention budgeting, followed by richer geography, economy, social/team intelligence, performance scaling and autonomous ecosystem validation.
+
+## v2.35.0: Ultron Brain v1
+
+Ultron now has a first unified agent architecture rather than relying only on independent smart subsystems. Each robot maintains a persistent **Agent Brain** with hierarchical goals, ranked goal competition, compact evidence-backed beliefs and bounded high-salience reflections. A new **global Agent Work Queue** decides which robots receive the existing expensive decision slots, preserving the hard performance rule of at most four expensive agent decisions per 1.5-second AI tick even on seven-robot saves.
+
+Brain v1 does not replace battle, catching, navigation, trading or economy mechanics. It chooses high-level intent and hands execution to the same legal systems that already enforce travel, resources and Pokémon ownership. Mandatory recovery, story/HM gates and other safety constraints remain authoritative. Flexible Brain intents can steer existing training, acquisition and exploration actions, while scouting and long-horizon Gym/League systems continue to supply specialised evidence.
+
+The Agent Brain persists through RobotMind **v14**. Direct battle/trade/capture events can update bounded beliefs, significant battles create compact reflections, and the **AGENT BRAIN** UI/Debug surface shows life goal, strategic goal, tactical step, selected utility and the leading alternatives. The work queue tracks wake priority, starvation/fairness and selected/companion urgency without adding another per-frame loop.
+
+The canonical roadmap now contains the full remaining Full-AI expansion plan: counterfactual reasoning, concept learning, predictive opponent models, world-knowledge graphs, route valuation, scheduling, economy forecasting, social provenance/trust, cooperative objectives, deeper Pokémon relationships/team synergy, agent sleep, distance-based simulation fidelity, dirty-state planning, performance classes, autonomous campaign tests, diversity metrics, a stable Agent API and eventual optional external-brain/sandbox interfaces.
+
+## v2.34.2: double-battle identity and targeting hotfix
+
+- Fixed robot companion identity leaking through the player HUD borrow. A robot Geodude can no longer be announced as the player's Pikachu when the doubles renderer temporarily borrows the lead HUD slot.
+- Doubles battlers now keep a stable canonical species/name identity independent of `battle.player`, `battle.player2`, `battle.enemy` and `battle.enemy2` presentation slots.
+- Fixed manual target selection losing the selected second foe. Selecting Rattata now pins that exact battler plus its sticky doubles anchor instead of allowing a HUD swap to collapse the action back onto lead foe Gulpin.
+- Directional target navigation now resolves foes by stable anchor rather than toggling the mutable `enemy2` pointer. Pointer/touch aiming uses the same stable target identity.
+- Player and companion queued actions carry a target anchor as a second execution-time guard, so presentation/HUD integrations cannot redirect a legal selected target.
+- Added a deterministic Geodude/Pikachu + Gulpin/Rattata regression matching the supplied video.
+
+
+## v2.34.1: companion double-battle action hotfix
+
+Robot companions now correctly choose and execute their own actions in embedded double battles. The controller uses the live battler `curMoves` list and passes the actual move instance into Gen1Recomp, so PP is decremented and persisted normally. The emergency fallback and invisible Struggle path use the same engine-compatible action shape.
+
+
+## v2.34.0: world stories, contextual voices, historical replay and measured performance
+
+Ultron now completes the formal miniature-AI expansion roadmap while preserving the permanent seven-agent performance rule. Major autonomous events flow through one shared event spine rather than seven background scanners, and the new profiler instruments work that already happens instead of adding its own update loop.
+
+### Robot-driven world story news
+
+A bounded **World Story News** chronicle promotes important public events such as Champion changes, rare/shiny/legendary catches, tournament upsets and titles, character-arc breakthroughs, major relationship shifts and a publicly observed player Championship. Events are deduplicated and never mutate player story flags.
+
+### Situation-specific robot dialogue
+
+All seven robots now have distinct event reactions for blackouts, starter faints/evolutions, title wins/losses, player Championships, trades, grudges, mentorship, rare catches and tournament exits. Dialogue is generated from the event that already occurred, stored in a bounded per-robot history and never requires a new polling loop.
+
+### Hall of Fame archive replay
+
+The in-game **Hall Archive** reconstructs historical League crowns/defences and tournament finals from bounded public traces already stored by Champion Lineage and Tournament Director. It can show old title teams, finalists and decisive Pokémon/moves when those details were actually observable. Replays are textual historical reconstructions; Ultron never re-simulates an old battle or invents hidden moves/items. Tournament Director is now schema v5 so simulated finals can retain bounded public finalist snapshots and decisive traces.
+
+### Performance profiler
+
+The **Performance** view exposes measured whole-pulse cost, per-robot AI decision time, scheduler selection, path/travel cost and tournament-simulation cost. The same view now shows automatic FULL / CONSERVE / PROTECT scaling pressure, effective versus configured decision budget, deep-plan cadence, tactical-depth cap, tournament batch size and bounded mode history. Instrumentation remains attached to existing calls and creates no independent profiler loop.
+
+The canonical unfinished roadmap is empty after this release. Its architectural, legitimacy, diversity and regression requirements remain permanent rules for future development.
+
+## v2.33.0: miniature-AI goals, public scouting and earned tactical depth
+
+Ultron now treats its long-term architecture explicitly as a **seven-agent miniature AI ecosystem**: up to seven autonomous robots should be able to plan, travel, battle, catch, trade, breed, scout, manage finite resources, learn and develop without turning the mod into a permanent CPU tax. New planners therefore reuse the existing four-agent decision budget, shared event streams, cached world data and bounded histories instead of adding seven always-on scans.
+
+### Independent Pokedex projects
+
+Each robot can maintain a bounded Pokédex project chosen from legal opportunities in the current game: regional completion, rare-species hunting, an existing Gen 2 breeding project, or an optional shiny hunt when legitimate shiny support exists. A shared encounter-ecology index is built in small slices and cached once per engine, so seven robots do not each rescan the world. Projects only create intentions. Actual catches, routes, Day-Care work, Poké Balls and encounter legality still pass through the existing autonomous systems.
+
+### Physical public battle scouting
+
+Robots can deliberately travel to observe a future opponent when public evidence says the trip is worthwhile. Only a bounded number of scouts may be active at once. Player scouting retains only information revealed by a battle the robot was physically present to observe, while same-map robot observers reuse the already-resolved duel event and the two lineups that actually fought. No hidden player party, robot PC, duplicate battle simulation or remote omniscience is used.
+
+### Adaptive tactical growth without cheating
+
+Robots now have save-specific tactical ceilings and authored flaws. Real battle experience can unlock deeper legal decisions such as safer pivots, setup disruption, revenge positioning and advanced PP-war plans, but it never changes stats, damage RNG, Pokémon ownership or item inventories. Personality remains visible at high skill: Robby and WALL-E will not deliberately sacrifice a bench partner, R2-D2 only learns patient PP-stall play at the highest tactical tier, and T-800 must learn enough restraint before using safer pivot logic. Separate Save DNA can shift a robot's ceiling slightly while remaining inside its authored cap.
+
+The **Pokédex Goals**, **Public Scouting** and **Tactical Growth** views expose the new agent state, and Robot Debug includes the same bounded diagnostics. RobotMind is now **v12** with lazy migration/backfill.
+
+## v2.32.0: nine tournament formats and competitive seasons
+
+Ultron's standalone tournament director now supports **Single Elimination, Seeded Cup, Swiss, Round Robin, Double Elimination, Level 30/50 Cups, Type Cups, Rental Cups and Champion Invitationals**. The format picker lives under **ULTRON → TOURNAMENTS** and each format has bounded persistent state, Save-DNA-salted scheduling and readable in-game diagnostics. The World mod is still not required.
+
+Level/type restrictions are enforced without permanent stat or party edits. Robots may use temporary tournament overlays assembled only from eligible Pokemon already in their active party, then real HP/status/PP are synchronized back to those Pokemon. Player teams are validated against the rule instead of silently altered. Rental Cups are AI-only exhibitions so Ultron never replaces the player's owned party with rentals.
+
+Completed events also feed an eight-event **Competitive Season** with live rankings and bounded archives. Seasonal awards include **Season Champion, Cup Collector, Giant Killer and Iron Circuit**. After the eighth event, standings and awards are archived and the next season begins automatically.
+
+## v2.31.0: unique save DNA, character arcs and Champion eras
+
+Robots **never retire**. Instead, every robot has a permanent four-chapter character progression arc driven by real setbacks, recoveries, mentorship, bonds, tournaments and Champion-level experience. Each independently-created save receives persistent **Ultron Save DNA**, giving every robot save-specific arc timing/emphasis, RNG streams and modest legal team tastes so a new save does not simply replay the same personalities and team development.
+
+Save DNA changes preferences among legal choices only. It does not alter Pokemon stats, damage RNG, encounter legality, move legality, story flags or ownership. Reloading the same save remains deterministic; intentionally copying a save also copies its timeline identity.
+
+Champion Lineage now identifies significant reigns as named **Eras** and repeated dominant reigns as **Dynasties**, with the history exposed through Hall of Champions.
+
+## v2.30.0: live risk, earned reputation and negotiated robot trades
+
+- **Risk tolerance is now live behaviour rather than a descriptive personality number.** Each robot derives a bounded risk state from its authored profile, learning DNA, recent wins/losses, near-blackouts and remembered social pressure. That state changes healing thresholds, damaged-team major-battle readiness, voluntary challenge cadence and how much scarce healing/PP/cash stock the robot tries to preserve. Robby and Andrew naturally play safer; T-800 and R2-D2 accept thinner margins; repeated failures can temper even an aggressive robot.
+- Added a bounded **public reputation system** for both robots and the player. Reputations such as Champion Slayer, Giant Killer, Comeback Specialist, Collector, Breeder, Tournament Monster and Dynast are earned only from observed accomplishments. Dangerous player reputations modestly raise scouting caution and reduce reckless voluntary challenges; Thoughts and Robot Debug expose the evidence without hidden information.
+- Expanded **robot-to-robot trade negotiation**. Robots now score legal exchanges for duplicate/expendable stock, missing Pokédex entries, team-fit gaps, new type coverage, trade-evolution opportunities, trust and each robot's negotiation personality. A permanent trade still occurs only when both sides independently accept the exchange under the existing TradeTrust valuation. Failed proposals and completed deals are bounded and diagnosable.
+- Added dedicated negotiation profiles for **Robby, T-800 and Andrew**, instead of letting them inherit Ultron's generic trade profile.
+- RobotMind is now **v9** with lazy migration for riskTolerance, reputation and tradeNegotiation. The three completed roadmap items were removed from the unfinished-only roadmap after their deterministic audits passed.
+
+
+## v2.29.0: remembered battles, social arcs and earned team identities
+
+- Added bounded **salient battle memory**: recurring species behind repeated defeats, low-margin clutch partners, major tournament/League memories and opponent streaks can now be retained and surfaced in Thoughts, Current Plan and Robot Debug.
+- Added **Relationship Evolution** on top of the existing relationship network. Repeated battles, cooperation, trades, championship meetings, snubs and broken/returned loans can develop into Friend, Ally, Rival, Respected Rival, Friendly Rival, Grudge or Nemesis arcs. These arcs modestly alter voluntary challenge frequency without forcing battles or changing stats.
+- Added persistent **Dynamic Team Identity**. Repeated legitimate success can crystallise into Weather, Bulky Control, Status Control, Speed Offence, Break Pressure or Partner Core identities, which only add a modest tie-breaking preference when selecting from Pokemon the robot already owns.
+- RobotMind is now **v8**. All three structures lazy-backfill old saves, retain bounded histories, expose readable diagnostics and have deterministic audits.
+- The remaining expansion ideas are now stored in `docs/ROBOT_IMPROVEMENT_ROADMAP.md`; completed items are removed from that living list as required by the roadmap maintenance rule.
+
+## v2.28.0: transparent plans, robot legacies and competitive history
+
+- **Current Plan** UI/debug views expose a robot's ultimate objective, active step, progress, confidence, main concern, contingency/rewrite reason and bounded legal evidence.
+- Seven persistent **career/philosophy** tracks give Ultron, Data, R2-D2, WALL-E, Robby, T-800 and Andrew distinct long-term identities earned through real play.
+- Standalone tournaments now remember **robot rivalries, finals, title streaks and dynasties**.
+- **Counter-meta evolution** learns only from observed/shared opponent archetypes and modestly influences legal roster selection without stat boosts or fabricated resources.
+- Same-map **robot mentorship** shares planning lessons, never Pokemon, levels, money, items or hidden information.
+- The **Hall of Champions** combines League lineage and tournament history into a readable competitive record.
+- All new state is bounded, migrates lazily from old saves, exposes diagnostics and is covered by deterministic regression audits.
+
+## v2.27.0: standalone tournaments, Champion lineage and seven-robot roster
+
+Ultron now owns its tournament system. **The World is not required** to create or run a tournament: Ultron builds persistent brackets from **3 to 100 entrants**, seeds the player, active robots and legitimate trainer parties from the loaded game, handles non-power-of-two byes, simulates off-screen matches, preserves robot/guest HP and PP between rounds, launches the player's rounds as real trainer battles, records eliminations/winners once, and keeps the existing round-aware resource-conservation intelligence. External tournament APIs are compatibility fallbacks only.
 
 Champion succession is now persistent. Crown changes and qualified title defences enter a bounded **Champion Lineage** containing only legitimate public/observed title information: holder, succession, public species/levels, reign length, title defences, head-to-head rematch history, and the decisive Pokemon/move only when the battle trace actually exposed it. Qualified challengers study the current holder, while reigning Champions can prepare for likely challengers using only prior observation or earlier public title teams. Both sides may travel to a Pokemon Center to make legal PC/TM adjustments from resources they already own, and challengers can modestly prefer owned species that repeatedly appeared on historical dethroning teams. No hidden moves, DVs, held items, player-private information, free Pokemon, free moves, levels or items are granted.
 
